@@ -10,13 +10,6 @@ const reload = browserSync.reload;
 
 const exec = require('child_process').exec;
 
-gulp.task('scrape', function (cb) {
-  exec('php scraper.php', function (err, stdout, stderr) {
-    //console.log(stdout)
-    cb(err);
-  });
-});
-
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -105,7 +98,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['scrape', 'styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,

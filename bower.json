@@ -2,7 +2,8 @@
   "name": "isis",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "leaflet": "^0.7.7"
   },
   "devDependencies": {
     "chai": "^3.5.0",
