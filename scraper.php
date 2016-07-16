@@ -7,9 +7,8 @@ libxml_use_internal_errors(true);
 
 $years = [2011, 2012, 2013, 2014, 2015, 2016];
 
-if (!is_dir('.tmp')) {
-    mkdir('.tmp');
-}
+if (!is_dir('.tmp')) { mkdir('.tmp'); }
+if (!is_dir('app/json')) { mkdir('app/json'); }
 
 foreach ($years as $year) {
     if (!file_exists('.tmp/' . $year . '.cache')) {
@@ -40,17 +39,25 @@ foreach ($years as $year) {
         10 => 'description'
     ];
 
-    foreach($doc->getElementsByTagName('tr') as $row) {
-        $row_object = [];
+    foreach($doc->getElementsByTagName('tr') as $row_delta => $row) {
+        if ($row_delta > 0) {
+            $row_object = [];
 
-        foreach ($row->childNodes as $delta => $td) {
-            if (isset($delta_mapping[$delta])) {
-                $row_object[$delta_mapping[$delta]] = trim($td->nodeValue);
+            foreach ($row->childNodes as $delta => $td) {
+                if (isset($delta_mapping[$delta])) {
+                    $value = trim($td->nodeValue);
+
+                    if ($delta == 0) {
+                        $value = str_replace('.', '-', $value);
+                    }
+
+                    $row_object[$delta_mapping[$delta]] = $value;
+                }
             }
-        }
 
-        $objects[] = $row_object;
+            $objects[] = $row_object;
+        }
     }
 
-    print_r($objects);
+    file_put_contents('app/json/' . $year . '.json', json_encode($objects, JSON_PRETTY_PRINT));
 }
