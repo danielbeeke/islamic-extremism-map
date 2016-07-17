@@ -2,6 +2,7 @@ var octopus = {
     workers: {},
     data: {},
     map: false,
+    types: ['injured', 'killed'],
     geoless: 0,
     cluster: L.markerClusterGroup({
         showCoverageOnHover: false,
@@ -10,7 +11,6 @@ var octopus = {
         iconCreateFunction: function(cluster) {
             var countInjured = 0;
             var countKilled = 0;
-            var classes = [];
 
             cluster.getAllChildMarkers().forEach(function (child) {
                 countInjured = countInjured + parseInt(child._data.injured);
@@ -19,10 +19,19 @@ var octopus = {
 
             var total = countInjured + countKilled;
 
-            var markup = '<span class="number">' + total + '</span>';
+            var iconSize = 45;
+
+            var pieSVG = octopus.createPie({
+                size: iconSize,
+                items: [countKilled, countInjured],
+                colors: ['#ea7070', '#b80000']
+            });
+
+            var markup = pieSVG.outerHTML + '<span class="number">' + total + '</span>';
 
             return new L.DivIcon({
-                html: markup
+                html: markup,
+                iconSize: L.point(iconSize, iconSize)
             })
         }
     }),
@@ -31,55 +40,32 @@ var octopus = {
     mapLayer: 'http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u',
 
     init: function () {
-        //octopus.initMap();
-        //octopus.loadMarkers();
-
-        var data = {
-            size: 230,
-            sectors: [
-                {
-                    percentage: 0.43,
-                    label: 'Thing 1'
-                },
-                {
-                    percentage: 0.22,
-                    label: "Thing Two"
-                },
-                {
-                    percentage: 0.18,
-                    label: "Another Thing"
-                },
-                {
-                    percentage: 0.17,
-                    label: "Pineapple"
-                }
-            ]
-        };
-
-        octopus.createPie(data);
+        octopus.initMap();
+        octopus.loadMarkers();
     },
 
     loadMarkers: function () {
         octopus.years.forEach(function (year) {
-            octopus.getYearViaWorker(year, function (data) {
-                var markers = [];
+            octopus.groups[year] = {};
 
-                data.forEach(function (item) {
-                    if (item.geo) {
-                        item.marker = L
-                            .marker([item.geo.lat, item.geo.lng])
-                            .bindPopup(octopus.getItemMarkup(item));
+            octopus.types.forEach(function (type) {
+                octopus.getYearViaWorker(year, function (data) {
+                    var markers = [];
 
-                        item.marker._data = item;
-                        markers.push(item.marker);
-                    }
-                    else {
-                        octopus.geoless++;
-                    }
+                    data.forEach(function (item) {
+                        if (item.geo && item[type] > 0) {
+                            item.marker = L
+                                .marker([item.geo.lat, item.geo.lng])
+                                .bindPopup(octopus.getItemMarkup(item));
+
+                            item.marker._data = item;
+                            markers.push(item.marker);
+                        }
+                    });
+
+                    octopus.groups[year][type] = L.featureGroup.subGroup(octopus.cluster, markers);
+                    octopus.groups[year][type].addTo(octopus.map);
                 });
-
-                octopus.groups[year] = L.featureGroup.subGroup(octopus.cluster, markers);
-                octopus.groups[year].addTo(octopus.map);
             });
         });
     },
@@ -127,94 +113,38 @@ var octopus = {
     },
 
     createPie: function (data) {
-        var helpers = {
-            calculateSectors: function (data) {
-                var sectors = [];
-                var colors = [
-                    "#61C0BF", "#DA507A", "#BB3D49", "#DB4547"
-                ];
+        var total = 0;
 
-                var l = data.size / 2;
-                var a = 0; // Angle
-                var aRad = 0; // Angle in Rad
-                var z = 0; // Size z
-                var x = 0; // Side x
-                var y = 0; // Side y
-                var X = 0; // SVG X coordinate
-                var Y = 0; // SVG Y coordinate
-                var R = 0; // Rotation
+        data.items.forEach(function (item) {
+            total = total + item;
+        });
 
-                var aCalc, arcSweep;
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute('height', data.size);
+        svg.setAttribute('width', data.size);
+        svg.setAttribute('class', 'pie-chart');
+        svg.style.background = data.colors[0];
 
-                data.sectors.map( function(item, key ) {
-                    a = 360 * item.percentage;
-                    aCalc = ( a > 180 ) ? 360 - a : a;
-                    aRad = aCalc * Math.PI / 180;
-                    z = Math.sqrt( 2*l*l - ( 2*l*l*Math.cos(aRad) ) );
-                    if( aCalc <= 90 ) {
-                        x = l*Math.sin(aRad);
-                    }
-                    else {
-                        x = l*Math.sin((180 - aCalc) * Math.PI/180 );
-                    }
+        var slice = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 
-                    y = Math.sqrt( z*z - x*x );
-                    Y = y;
+        var r = data.size / 3;
+        var c = data.size / 2;
 
-                    if( a <= 180 ) {
-                        X = l + x;
-                        arcSweep = 0;
-                    }
-                    else {
-                        X = l - x;
-                        arcSweep = 1;
-                    }
+        slice.setAttribute('r', r);
+        slice.setAttribute('cx', c);
+        slice.setAttribute('cy', c);
+        slice.setAttribute('class', 'pie-slice');
+        slice.style.fill = data.colors[0];
+        slice.style.stroke = data.colors[1];
+        slice.style.strokeWidth = data.size * 21.5 * Math.PI / 100;
 
-                    sectors.push({
-                        percentage: item.percentage,
-                        label: item.label,
-                        color: colors[key],
-                        arcSweep: arcSweep,
-                        L: l,
-                        X: X,
-                        Y: Y,
-                        R: R
-                    });
+        var percentage = 2 * Math.PI * r / 100 * (100 / total * data.items[0]);
 
-                    R = R + a;
-                });
+        slice.style.strokeDasharray = percentage + ', ' + 2 * Math.PI * r;
 
-                return sectors
-            },
-            createSvg: function (data) {
-                var sectors = helpers.calculateSectors(data);
-                var newSVG = document.createElementNS( "http://www.w3.org/2000/svg","svg" );
-                newSVG.setAttributeNS(null, 'style', "width: " + data.size + "px; height: " + data.size + "px");
+        svg.appendChild(slice);
 
-                sectors.map( function(sector) {
-                    var newSector = document.createElementNS( "http://www.w3.org/2000/svg","path" );
-                    newSector.setAttributeNS(null, 'fill', sector.color);
-                    newSector.setAttributeNS(null, 'd', 'M' + sector.L + ',' + sector.L + ' L' + sector.L + ',0 A' + sector.L + ',' + sector.L + ' 0 ' + sector.arcSweep + ',1 ' + sector.X + ', ' + sector.Y + ' z');
-                    newSector.setAttributeNS(null, 'transform', 'rotate(' + sector.R + ', '+ sector.L+', '+ sector.L+')');
-
-                    newSVG.appendChild(newSector);
-                });
-
-                var midCircle = document.createElementNS( "http://www.w3.org/2000/svg","circle" );
-                midCircle.setAttributeNS(null, 'cx', data.size * 0.5 );
-                midCircle.setAttributeNS(null, 'cy', data.size * 0.5);
-                midCircle.setAttributeNS(null, 'r', data.size * 0.28 );
-                midCircle.setAttributeNS(null, 'fill', '#42495B' );
-
-                newSVG.appendChild(midCircle);
-
-                return newSVG;
-            }
-        };
-
-        var svg = helpers.createSvg(data);
-
-        console.log(svg);
+        return svg;
     }
 };
 

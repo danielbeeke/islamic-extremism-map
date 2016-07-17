@@ -8,6 +8,7 @@ const wiredep = require('wiredep').stream;
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 const ghPages = require('gulp-gh-pages');
+const sassGlob = require('gulp-sass-glob');
 
 const exec = require('child_process').exec;
 
@@ -18,6 +19,7 @@ gulp.task('deploy', function() {
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
+    .pipe(sassGlob())
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
