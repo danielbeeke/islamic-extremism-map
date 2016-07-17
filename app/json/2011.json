@@ -102,7 +102,7 @@
         "killed": "4",
         "injured": "1",
         "description": "Holy Warriors take out four civilians riding in a car.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-30",
@@ -891,7 +891,7 @@
         "killed": "1",
         "injured": "1",
         "description": "A teenager is murdered by Muslim terrorists while walking home from school.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-19",
@@ -960,7 +960,7 @@
         "killed": "1",
         "injured": "3",
         "description": "A child is among the casualties of a Jund al-Sham shooting attack.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-18",
@@ -981,7 +981,7 @@
         "killed": "3",
         "injured": "0",
         "description": "Tehreek-e-Taliban terrorists kill three local soldiers with an IED.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-17",
@@ -1158,7 +1158,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A man is shot to death by Jund al-Sham gunmen.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-14",
@@ -1515,7 +1515,7 @@
         "killed": "3",
         "injured": "0",
         "description": "Three tribal elders are shot to death by Islamic activists, including one in captivity.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-11",
@@ -1572,7 +1572,7 @@
         "killed": "1",
         "injured": "2",
         "description": "Muslim gunmen ambush Christian villagers in the middle of the night, murdering a 50-year-old woman.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-10",
@@ -2229,7 +2229,7 @@
         "killed": "3",
         "injured": "2",
         "description": "Three civilian defense volunteers are machine-gunned at a checkpoint by al-Qaeda.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-02",
@@ -2310,7 +2310,7 @@
         "killed": "8",
         "injured": "5",
         "description": "al-Qaeda gunmen pull eight people from their homes, line them up against the wall and shoot them.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-12-01",
@@ -2355,7 +2355,7 @@
         "killed": "2",
         "injured": "3",
         "description": "Two Christian brothers are murdered in cold blood by a Muslim mob rampaging through Christian homes and businesses.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-30",
@@ -2484,7 +2484,7 @@
         "killed": "2",
         "injured": "8",
         "description": "Two people are killed during a sectarian incident between Sunni and Shia.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-27",
@@ -2685,7 +2685,7 @@
         "killed": "26",
         "injured": "0",
         "description": "Twenty-six Christian villagers are shot and hacked to death by Fulani herdsmen screaming 'Allah Akbar'.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-24",
@@ -2838,7 +2838,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Muslims torture and shoot to death a Catholic father of four.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-23",
@@ -3039,7 +3039,7 @@
         "killed": "3",
         "injured": "1",
         "description": "Muslims hack three young Christians to death at an illegal roadblock.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-20",
@@ -3540,7 +3540,7 @@
         "killed": "6",
         "injured": "0",
         "description": "Four children and two women are crushed to death by a mortar attack on their home by Religion of Peace militants.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-13",
@@ -3561,7 +3561,7 @@
         "killed": "9",
         "injured": "0",
         "description": "A woman and child are among eight civilians torn to shreds by a Taliban bomb.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-12",
@@ -3714,7 +3714,7 @@
         "killed": "12",
         "injured": "20",
         "description": "The Islamic Republic of Sudan bombs a refugee camp from the air, killing about a dozen.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-10",
@@ -3843,7 +3843,7 @@
         "killed": "3",
         "injured": "1",
         "description": "A doctor is among three Hindus gunned down by Muslims at a village clinic.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-07",
@@ -3864,7 +3864,7 @@
         "killed": "7",
         "injured": "12",
         "description": "Seven die when a refugee camp is bombed by the Islamic Republic of Sudan.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-07",
@@ -3921,7 +3921,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Islamic terrorists gun down a man outside a mosque.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-06",
@@ -3942,7 +3942,7 @@
         "killed": "1",
         "injured": "3",
         "description": "A woman is shot to death by Mujahideen inside her home.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-06",
@@ -3963,7 +3963,7 @@
         "killed": "7",
         "injured": "18",
         "description": "A suicide bomber on foot takes out seven people leaving a mosque.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-06",
@@ -3996,7 +3996,7 @@
         "killed": "3",
         "injured": "7",
         "description": "Three bomb disposal personnel are ambushed and murdered by Sunni hardliners.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-05",
@@ -4293,7 +4293,7 @@
         "killed": "2",
         "injured": "2",
         "description": "Religious extremists attack a police checkpoint, killing two officers.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-11-01",
@@ -4578,7 +4578,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two brothers are killed when religious militants fire a rocket into their car.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-10-28",
@@ -5127,7 +5127,7 @@
         "killed": "1",
         "injured": "1",
         "description": "A civilian is cut down by automatic weapons fire from 'insurgents' in a passing car.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-10-22",
@@ -5928,7 +5928,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two former members of a peace committee are shot to death by militant Muslims.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-10-10",
@@ -6213,7 +6213,7 @@
         "killed": "1",
         "injured": "2",
         "description": "Hardliners open fire on a schoolteacher, killing him and injuring his wife and young son.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-10-03",
@@ -6318,7 +6318,7 @@
         "killed": "4",
         "injured": "3",
         "description": "al-Qaeda bombers take down four Iraqis.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-10-02",
@@ -6339,7 +6339,7 @@
         "killed": "11",
         "injured": "24",
         "description": "Eleven civilians are killed during an al-Shabaab attack.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-10-01",
@@ -6456,7 +6456,7 @@
         "killed": "17",
         "injured": "30",
         "description": "Sunni car bombers blast a funeral procession for a Shia sheikh, killing at least seventeen mourners.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-29",
@@ -6801,7 +6801,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Islamists behead a 17-year-old whose family held secret Bible studies in their home.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-24",
@@ -7002,7 +7002,7 @@
         "killed": "3",
         "injured": "0",
         "description": "The bodies of three abducted tribesman are found a month later - sans heads.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-21",
@@ -7179,7 +7179,7 @@
         "killed": "3",
         "injured": "8",
         "description": "Muslim activists raid a village, pull members of a Christian family from their home and then hack and shoot them to death.  The victims included children.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-18",
@@ -7236,7 +7236,7 @@
         "killed": "5",
         "injured": "3",
         "description": "Four members of a peace committee are among five killed at point-blank range by Jihadi gunmen.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-16",
@@ -7629,7 +7629,7 @@
         "killed": "5",
         "injured": "0",
         "description": "Three children are among five civilians disassembled by a homemade Sunni bomb.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-11",
@@ -7698,7 +7698,7 @@
         "killed": "14",
         "injured": "6",
         "description": "Fourteen Christian villagers from the same family, including a woman in labor, are hacked to death during a midnight Muslim raid.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-10",
@@ -7755,7 +7755,7 @@
         "killed": "3",
         "injured": "0",
         "description": "Three Protestant farmers are hacked to death by machete-wielding Muslims.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-09",
@@ -7800,7 +7800,7 @@
         "killed": "1",
         "injured": "2",
         "description": "Muslim 'pirates' shoot an unarmed French sailor on his own yacht.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-08",
@@ -7845,7 +7845,7 @@
         "killed": "10",
         "injured": "0",
         "description": "Muslim extremists murder a family of ten Christians.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-07",
@@ -7962,7 +7962,7 @@
         "killed": "4",
         "injured": "0",
         "description": "Four Christians are burned alive when militant Muslims set fire to their house.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-06",
@@ -7983,7 +7983,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two brothers are abducted and murdered by Islamic terrorists.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-05",
@@ -8076,7 +8076,7 @@
         "killed": "7",
         "injured": "0",
         "description": "Seven Christian villagers are murdered by Muslim extremists.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-04",
@@ -8097,7 +8097,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Boko Haram Islamists assassinate a local scholar.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-09-04",
@@ -8370,7 +8370,7 @@
         "killed": "17",
         "injured": "45",
         "description": "Seventeen local soldiers die during the aftermath of an al-Qaeda ambush.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-28",
@@ -8703,7 +8703,7 @@
         "killed": "3",
         "injured": "1",
         "description": "Islamic militants fire on a vehicle, killing a boy, his father and an uncle.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-25",
@@ -8880,7 +8880,7 @@
         "killed": "1",
         "injured": "2",
         "description": "Fundamentalists machine-gun a local soldier to death at a checkpoint.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-22",
@@ -9009,7 +9009,7 @@
         "killed": "4",
         "injured": "0",
         "description": "Four people are torn to pieces by an al-Qaeda suicide bomber with a ball-bearing packed belt.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-21",
@@ -9018,7 +9018,7 @@
         "killed": "9",
         "injured": "20",
         "description": "Nine members of a tribal gathering are sent to Allah by a Shahid suicide bomber.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-21",
@@ -9051,7 +9051,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Religious extremists murder a 60-year-old Afghan farmer in front of his sons.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-20",
@@ -9456,7 +9456,7 @@
         "killed": "9",
         "injured": "1",
         "description": "Seven children are among a Christian family of nine brutally murdered in their home by Muslim raiders.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-15",
@@ -9897,7 +9897,7 @@
         "killed": "6",
         "injured": "0",
         "description": "Six Christians are hacked to death in the middle of the night by Muslim raiders.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-11",
@@ -9918,7 +9918,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two tribesmen are shot to death by terrorists.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-11",
@@ -9927,7 +9927,7 @@
         "killed": "5",
         "injured": "1",
         "description": "Three women and two children are dismantled by a militant bomb attack on their home.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-11",
@@ -9996,7 +9996,7 @@
         "killed": "4",
         "injured": "0",
         "description": "Four civilians are kidnapped and beheaded by Sunni hardliners.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-09",
@@ -10233,7 +10233,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A passerby is caught in the cross-fire when two Islamist groups clash at a market.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-04",
@@ -10374,7 +10374,7 @@
         "killed": "4",
         "injured": "8",
         "description": "Four people lose their lives to an al-Shabaab attack.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-02",
@@ -10515,7 +10515,7 @@
         "killed": "1",
         "injured": "1",
         "description": "A woman dies from injuries when Taliban militants fire a rocket into her home.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-08-01",
@@ -10704,7 +10704,7 @@
         "killed": "6",
         "injured": "9",
         "description": "An al-Qaeda ambush leave six dead.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-29",
@@ -11109,7 +11109,7 @@
         "killed": "1",
         "injured": "7",
         "description": "A Fedayeen bomber takes out a Pakistani at a checkpoint.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-24",
@@ -11394,7 +11394,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Calling the child \"haram\", a devout Muslim woman strangles a baby to death after finding out that it is illegitimate",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-19",
@@ -11571,7 +11571,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A peace committee volunteer is tied to the back of a car and dragged to death by Lashkar-e-Islam.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-17",
@@ -11760,7 +11760,7 @@
         "killed": "3",
         "injured": "3",
         "description": "Islamists execute a person for stealing and blow up two security personnel in a separate attack.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-14",
@@ -12093,7 +12093,7 @@
         "killed": "5",
         "injured": "11",
         "description": "Islamic militants fire on civilian vehicles, killing five passengers including a father and son.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-09",
@@ -12114,7 +12114,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two civilians are killed by suspected al-Qaeda gunmen.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-07",
@@ -12399,7 +12399,7 @@
         "killed": "1",
         "injured": "13",
         "description": "One person is killed during a violent dispute between two group of members over control of a mosque.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-03",
@@ -12492,7 +12492,7 @@
         "killed": "0",
         "injured": "24",
         "description": "Dozens of innocent people, including children, choke on smoke or are beaten by fundamentalists who attack an apartment building suspected of housing prostitutes.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-07-02",
@@ -12789,7 +12789,7 @@
         "killed": "3",
         "injured": "4",
         "description": "Three Iraqis are murdered by an 'insurgent' bomb blast.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-27",
@@ -12798,7 +12798,7 @@
         "killed": "1",
         "injured": "7",
         "description": "Sunni bombers take out one mourner at a Shia funeral.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-27",
@@ -12879,7 +12879,7 @@
         "killed": "1",
         "injured": "0",
         "description": "The Taliban detonate an 8-year-old girl near a checkpoint.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-26",
@@ -13164,7 +13164,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two civilians are shot to death by religious hardliners.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-22",
@@ -13377,7 +13377,7 @@
         "killed": "4",
         "injured": "5",
         "description": "Four people are cut to pieces by a suicide bomb attack on a house hosting a peace committee.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-20",
@@ -13758,7 +13758,7 @@
         "killed": "3",
         "injured": "2",
         "description": "al-Qaeda militants assault a village, killing at least three defenders.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-15",
@@ -13899,7 +13899,7 @@
         "killed": "4",
         "injured": "0",
         "description": "Four drinkers at a beer garden are taken out by religious radicals.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-12",
@@ -14244,7 +14244,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A Christian seminary student is shot to death in front of bystanders by agents of the Islamic government.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-08",
@@ -14721,7 +14721,7 @@
         "killed": "20",
         "injured": "80",
         "description": "The second day of a sustained Taliban assault leaves twenty more dead.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-06-02",
@@ -14814,7 +14814,7 @@
         "killed": "8",
         "injured": "3",
         "description": "At least eight innocents are killed when Taliban militants blow up two girls' schools and attack a police post.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-05-31",
@@ -15195,7 +15195,7 @@
         "killed": "4",
         "injured": "18",
         "description": "A clash between Sunni and Shia leaves four dead.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-05-25",
@@ -15516,7 +15516,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two young men are abducted and tortured to death by fundamentalists.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-05-19",
@@ -16065,7 +16065,7 @@
         "killed": "7",
         "injured": "2",
         "description": "Armed fundamentalists attack a military barracks, slaying seven dead.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-05-13",
@@ -16146,7 +16146,7 @@
         "killed": "5",
         "injured": "4",
         "description": "Islamists ambush a group of government troops, killing five.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-05-11",
@@ -16515,7 +16515,7 @@
         "killed": "0",
         "injured": "1",
         "description": "After being spotted with a Bible, a female aid worker is arrested for apostasy and severely beaten.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-05-05",
@@ -16896,7 +16896,7 @@
         "killed": "2",
         "injured": "2",
         "description": "A man and his daughter are shot to death in their home by Islamic militants.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-30",
@@ -17013,7 +17013,7 @@
         "killed": "5",
         "injured": "12",
         "description": "Five Iraqis are blown to bits by a Sunni bomb.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-28",
@@ -17130,7 +17130,7 @@
         "killed": "2",
         "injured": "1",
         "description": "Fundamentalists cut two local cops to shreds with a shrapnel bomb.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-27",
@@ -17259,7 +17259,7 @@
         "killed": "1",
         "injured": "3",
         "description": "A Palestinian cop yells 'Allah Akbar' and opens fire on a group of orthodox Jewish pilgrims, killing one.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-24",
@@ -17316,7 +17316,7 @@
         "killed": "3",
         "injured": "0",
         "description": "A father slits his three teenaged daughters throats after learning of their having been raped by Libyan soldiers.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-23",
@@ -17397,7 +17397,7 @@
         "killed": "14",
         "injured": "9",
         "description": "Armed religious extremists assault two remote checkpoints, killing fourteen security personnel.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-22",
@@ -17766,7 +17766,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A 21-year-old convert to Christianity is pulled from his home and shot 10 times by Islamists yelling 'Allah Akbar'.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-18",
@@ -17979,7 +17979,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Salafis belonging to Jahafil Al-Tawhid Wal-Jihad fi Filastin kidnap and murder an Italian activist.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-14",
@@ -18072,7 +18072,7 @@
         "killed": "5",
         "injured": "6",
         "description": "A vicious double bombing at a home leaves three family members and two rescue workers dead.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-12",
@@ -18453,7 +18453,7 @@
         "killed": "4",
         "injured": "3",
         "description": "Four children playing near a pond are taken down by Mujahid bombers.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-06",
@@ -18522,7 +18522,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A farmer bleeds out following a Mujahideen rocket attack.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-05",
@@ -18543,7 +18543,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A Israeli-Arab activist is gunned down by Islamic radicals unhappy with the secular character of his work.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-04",
@@ -18564,7 +18564,7 @@
         "killed": "6",
         "injured": "0",
         "description": "A bomb hidden on a booby-trapped corpse kills six Iraqis.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-04",
@@ -18705,7 +18705,7 @@
         "killed": "6",
         "injured": "8",
         "description": "Terrorists shoot six security guards to death.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-01",
@@ -18714,7 +18714,7 @@
         "killed": "1",
         "injured": "5",
         "description": "A suicide bomber takes out a 12-year-old boy at a market.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-04-01",
@@ -19647,7 +19647,7 @@
         "killed": "4",
         "injured": "9",
         "description": "al-Shabaab militants fire on a public bus, killing four passengers.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-03-14",
@@ -19752,7 +19752,7 @@
         "killed": "6",
         "injured": "0",
         "description": "A married couple and their four young children are turned into debris by an Islamist mortar attack on their home.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-03-12",
@@ -19821,7 +19821,7 @@
         "killed": "4",
         "injured": "5",
         "description": "Four security personnel are taken out by an al-Qaeda ambush.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-03-11",
@@ -19938,7 +19938,7 @@
         "killed": "2",
         "injured": "2",
         "description": "Mujahideen toss a grenade into a family home, killing a man and a woman.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-03-08",
@@ -20223,7 +20223,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Suspected al-Qaeda gunmen murder a civilian.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-03-05",
@@ -20796,7 +20796,7 @@
         "killed": "1",
         "injured": "2",
         "description": "A 10-year-old girl is killed when a Hamas bomb detonates prematurely.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-02-23",
@@ -21009,7 +21009,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Two villagers are murdered by Islamic militants.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-02-20",
@@ -21762,7 +21762,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A young Christian is tortured to death by several Muslims.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-02-06",
@@ -21939,7 +21939,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A local cop is gunned down by al-Qaeda militants.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-02-03",
@@ -22608,7 +22608,7 @@
         "killed": "2",
         "injured": "0",
         "description": "Video surfaces of a brutal stoning the previous August of two young lovers.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-01-24",
@@ -23025,7 +23025,7 @@
         "killed": "2",
         "injured": "16",
         "description": "Two Shiite pilgrims are sent to Allah by a Sunni suicide bomber.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-01-19",
@@ -23394,7 +23394,7 @@
         "killed": "4",
         "injured": "5",
         "description": "Hardliners take down five local police with a remote-controlled bomb.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-01-13",
@@ -23499,7 +23499,7 @@
         "killed": "19",
         "injured": "3",
         "description": "Children are among the victims when Muslims attack a Christian village, hacking nineteen to death and burning their homes.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-01-11",
@@ -23568,7 +23568,7 @@
         "killed": "1",
         "injured": "0",
         "description": "A folk healer is killed in his home by suspected Islamic fundamentalists.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-01-11",
@@ -23769,7 +23769,7 @@
         "killed": "13",
         "injured": "0",
         "description": "At least a dozen local soldiers riding in a water supply convoy are machine-gunned to death by al-Qaeda.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-01-07",
@@ -23826,7 +23826,7 @@
         "killed": "1",
         "injured": "0",
         "description": "Islamic militants slit the throat of a Christian mother of four.",
-        "geo": null
+        "geo": false
     },
     {
         "date": "2011-01-06",

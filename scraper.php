@@ -70,8 +70,10 @@ foreach ($years as $year) {
         $objects = json_decode(file_get_contents('app/json/' . $year . '.json'), TRUE);
 
         foreach ($objects as &$object) {
-            $object['geo'] = get_geo($object);
-            file_put_contents('app/json/' . $year . '.json', json_encode($objects, JSON_PRETTY_PRINT));
+            if (!isset($object['geo'])) {
+                $object['geo'] = get_geo($object);
+                file_put_contents('app/json/' . $year . '.json', json_encode($objects, JSON_PRETTY_PRINT));
+            }
         }
     }
 }
@@ -86,7 +88,11 @@ function get_geo($object) {
     }
 
     if (!isset($geo_cache[$object['country']][$object['city']])) {
-        $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyCVO_TF5jPc6xtt8wjMT5UBAe3RYvdUilI&address=' . utf8_encode(urlencode($object['city'] . ',' . $object['country']))), TRUE);
+        $location = $object['city'] . ',' . $object['country'];
+
+        $location = urlencode(cleanString($location));
+
+        $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyCVO_TF5jPc6xtt8wjMT5UBAe3RYvdUilI&address=' . $location), TRUE);
         if (isset($geo_result['results'][0]['geometry']['location'])) {
             $geo_cache[$object['country']][$object['city']] = $geo_result['results'][0]['geometry']['location'];
             file_put_contents('data_cache/geo.cache', json_encode($geo_cache));
@@ -102,4 +108,28 @@ function get_geo($object) {
     if (isset($geo_cache[$object['country']][$object['city']])) {
         return $geo_cache[$object['country']][$object['city']];
     }
+}
+
+function cleanString($text) {
+    $utf8 = array(
+        '/[áàâãªäa]/u'   =>   'a',
+        '/[ÁÀÂÃÄ]/u'    =>   'A',
+        '/[ÍÌÎÏ]/u'     =>   'I',
+        '/[íìîï]/u'     =>   'i',
+        '/[éèêë]/u'     =>   'e',
+        '/[ÉÈÊË]/u'     =>   'E',
+        '/[óòôõºö]/u'   =>   'o',
+        '/[ÓÒÔÕÖ]/u'    =>   'O',
+        '/[úùûü]/u'     =>   'u',
+        '/[ÚÙÛÜ]/u'     =>   'U',
+        '/ç/'           =>   'c',
+        '/Ç/'           =>   'C',
+        '/ñ/'           =>   'n',
+        '/Ñ/'           =>   'N',
+        '/–/'           =>   '-', // UTF-8 hyphen to "normal" hyphen
+        '/[’‘‹›‚]/u'    =>   ' ', // Literally a single quote
+        '/[“”«»„]/u'    =>   ' ', // Double quote
+        '/  /'           =>   ' ', // nonbreaking space (equiv. to 0x160)
+    );
+    return preg_replace(array_keys($utf8), array_values($utf8), $text);
 }
