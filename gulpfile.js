@@ -138,6 +138,11 @@ gulp.task('serve:dist', () => {
   });
 });
 
+gulp.task('copy', function() {
+  gulp.src('app/scripts/worker.js')
+      .pipe(gulp.dest('dist/scripts'));
+});
+
 gulp.task('serve:test', ['scripts'], () => {
   browserSync({
     notify: false,
@@ -172,7 +177,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['copy', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

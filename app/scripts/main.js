@@ -61,7 +61,7 @@ var octopus = {
     },
 
     getYearViaWorker: function(year, callback) {
-        var url = '/json/' + year + '.json';
+        var url = '../json/' + year + '.json';
         octopus.workers[url] = new Worker('scripts/worker.js');
         octopus.workers[url].postMessage(url);
         octopus.workers[url].onmessage = function(event) {
