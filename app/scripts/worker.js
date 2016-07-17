@@ -17,5 +17,3 @@ onmessage = function(e) {
     var url = e.data;
     worker.get(url);
 };
-
-console.log('worker started');

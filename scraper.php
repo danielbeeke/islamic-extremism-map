@@ -6,6 +6,7 @@ ini_set('display_startup_errors', TRUE);
 libxml_use_internal_errors(true);
 
 $years = [2011, 2012, 2013, 2014, 2015, 2016];
+$years = [2012, 2013, 2014, 2015, 2016];
 
 if (!is_dir('data_cache')) { mkdir('data_cache'); }
 if (!is_dir('app/json')) { mkdir('app/json'); }
