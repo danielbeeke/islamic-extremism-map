@@ -2,6 +2,7 @@
   z-index: 1;
   border: 0 !important;
   background: transparent !important;
+  
   &:after {
     display: block;
     position: absolute;
@@ -17,18 +18,29 @@
     z-index: -1;
   }
 
+  &:before {
+    $size: 80%;
+    content: '';
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: $size;
+    height: $size;
+  }
+  
   .number {
-    $size: 36px;
+    $size: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 2;
     transform: translate(-50%, -50%);
-    background: black;
+    z-index: 2;
     border-radius: 50%;
     width: $size;
-    height: $size;
-    line-height: $size;
     text-align: center;
     color: white;
   }

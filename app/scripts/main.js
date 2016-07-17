@@ -1,9 +1,10 @@
+var min = 100;
+var max = 0;
+
 var octopus = {
     workers: {},
     data: {},
     map: false,
-    types: ['injured', 'killed'],
-    geoless: 0,
     cluster: L.markerClusterGroup({
         showCoverageOnHover: false,
         singleMarkerMode: true,
@@ -19,7 +20,7 @@ var octopus = {
 
             var total = countInjured + countKilled;
 
-            var iconSize = 45;
+            var iconSize = 40;
 
             var pieSVG = octopus.createPie({
                 size: iconSize,
@@ -32,7 +33,7 @@ var octopus = {
             return new L.DivIcon({
                 html: markup,
                 iconSize: L.point(iconSize, iconSize)
-            })
+            });
         }
     }),
     groups: {},
@@ -46,26 +47,22 @@ var octopus = {
 
     loadMarkers: function () {
         octopus.years.forEach(function (year) {
-            octopus.groups[year] = {};
+            octopus.getYearViaWorker(year, function (data) {
+                var markers = [];
 
-            octopus.types.forEach(function (type) {
-                octopus.getYearViaWorker(year, function (data) {
-                    var markers = [];
+                data.forEach(function (item) {
+                    if (item.geo) {
+                        item.marker = L
+                            .marker([item.geo.lat, item.geo.lng])
+                            .bindPopup(octopus.getItemMarkup(item));
 
-                    data.forEach(function (item) {
-                        if (item.geo && item[type] > 0) {
-                            item.marker = L
-                                .marker([item.geo.lat, item.geo.lng])
-                                .bindPopup(octopus.getItemMarkup(item));
-
-                            item.marker._data = item;
-                            markers.push(item.marker);
-                        }
-                    });
-
-                    octopus.groups[year][type] = L.featureGroup.subGroup(octopus.cluster, markers);
-                    octopus.groups[year][type].addTo(octopus.map);
+                        item.marker._data = item;
+                        markers.push(item.marker);
+                    }
                 });
+
+                octopus.groups[year] = L.featureGroup.subGroup(octopus.cluster, markers);
+                octopus.groups[year].addTo(octopus.map);
             });
         });
     },
@@ -74,7 +71,8 @@ var octopus = {
         octopus.map = L.map('map', {
             attributionControl: false,
             minZoom: 3,
-            maxZoom: 8
+            maxZoom: 8,
+            zoomControl: false,
         }).setView([51.505, -0.09], 3);
         L.tileLayer(octopus.mapLayer).addTo(octopus.map);
         octopus.cluster.addTo(octopus.map);
@@ -119,13 +117,13 @@ var octopus = {
             total = total + item;
         });
 
-        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('height', data.size);
         svg.setAttribute('width', data.size);
         svg.setAttribute('class', 'pie-chart');
         svg.style.background = data.colors[0];
 
-        var slice = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        var slice = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
 
         var r = data.size / 3;
         var c = data.size / 2;
