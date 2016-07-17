@@ -2,33 +2,39 @@ var octopus = {
     workers: {},
     data: {},
     map: false,
+    cluster: L.markerClusterGroup({
+        showCoverageOnHover: false
+    }),
+    years: [2011, 2012, 2013],
+    mapLayer: 'http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u',
 
     init: function () {
         octopus.initMap();
 
-        octopus.getYearViaWorker(2011, function (data) {
-            data.forEach(function (item) {
-                if (item.geo) {
-                    var radius = parseInt(item.killed) + parseInt(item.injured) * 100;
-                    item.marker = L
-                    .circle([item.geo.lat, item.geo.lng], radius, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    })
-                    .bindPopup(octopus.getItemMarkup(item))
-                    .addTo(octopus.map);
-                }
-                else {
-                    console.log(item)
-                }
+        octopus.years.forEach(function (year) {
+            octopus.getYearViaWorker(year, function (data) {
+                data.forEach(function (item) {
+                    if (item.geo) {
+                        var radius = parseInt(item.killed) + parseInt(item.injured) * 500;
+                        item.marker = L
+                            .circle([item.geo.lat, item.geo.lng], radius, {
+                                color: 'red',
+                                fillColor: '#f03',
+                                fillOpacity: 0.5
+                            })
+                            .bindPopup(octopus.getItemMarkup(item))
+                            .addTo(octopus.cluster);
+                    }
+
+                    octopus.cluster.addTo(octopus.map);
+                });
             });
         });
     },
 
     initMap: function () {
         octopus.map = L.map('map').setView([51.505, -0.09], 3);
-        L.tileLayer('http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u').addTo(octopus.map);
+        L.tileLayer(octopus.mapLayer).addTo(octopus.map);
     },
 
     getData: function () {
