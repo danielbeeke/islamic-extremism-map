@@ -140,7 +140,10 @@ gulp.task('serve:dist', () => {
 
 gulp.task('copy', function() {
   gulp.src('app/scripts/worker.js')
-      .pipe(gulp.dest('dist/scripts'));
+      .pipe(gulp.dest('dist'));
+
+  gulp.src('app/json/*')
+      .pipe(gulp.dest('dist/json'));
 });
 
 gulp.task('serve:test', ['scripts'], () => {
