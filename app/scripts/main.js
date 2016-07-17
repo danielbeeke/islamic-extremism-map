@@ -2,10 +2,11 @@ var octopus = {
     workers: {},
     data: {},
     map: false,
+    geoless: 0,
     cluster: L.markerClusterGroup({
         showCoverageOnHover: false
     }),
-    years: [2011, 2012, 2013],
+    years: [2011, 2012, 2013, 2014, 2015, 2016],
     mapLayer: 'http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u',
 
     init: function () {
@@ -24,6 +25,9 @@ var octopus = {
                             })
                             .bindPopup(octopus.getItemMarkup(item))
                             .addTo(octopus.cluster);
+                    }
+                    else {
+                        octopus.geoless++;
                     }
 
                     octopus.cluster.addTo(octopus.map);
@@ -73,4 +77,5 @@ var octopus = {
 
 $(function() {
     octopus.init();
+    console.log(octopus)
 });
