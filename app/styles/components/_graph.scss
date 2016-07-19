@@ -1,0 +1,11 @@
+.chart {
+  position: absolute;
+  bottom: 0;
+  height: 300px;
+  width: 100%;
+
+  .highcharts-grid,
+  .highcharts-background {
+    display: none;
+  }
+}

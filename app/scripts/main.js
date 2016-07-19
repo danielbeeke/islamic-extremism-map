@@ -193,9 +193,14 @@ var octopus = {
 
         if (data.length) {
             new Highcharts.Chart({
+                credits: {
+                    enabled: false
+                },
                 chart: {
                     zoomType: 'x',
                     renderTo : 'chart',
+                    backgroundColor: 'null',
+                    type: 'area'
                 },
                 title: {
                     text: ''
@@ -211,14 +216,17 @@ var octopus = {
                 series: [{
                     type: 'area',
                     name: 'Attacks',
-                    data: data[0]
+                    data: data[0],
+                    color: '#67b7ff',
                 },{
                     type: 'area',
                     name: 'Killed',
+                    color: '#b80000',
                     data: data[1]
                 },{
                     type: 'area',
                     name: 'Injured',
+                    color: '#ea7070',
                     data: data[2]
                 }]
             });
