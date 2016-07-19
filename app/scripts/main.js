@@ -66,25 +66,34 @@ var octopus = {
     },
 
     loadMarkers: function () {
+        var functions = [];
+
         octopus.years.forEach(function (year) {
-            octopus.getYearViaWorker(year, function (data) {
-                var markers = [];
+            functions.push(function (callback) {
+                octopus.getYearViaWorker(year, function (data) {
+                    var markers = [];
 
-                data.forEach(function (item) {
-                    if (item.geo) {
-                        item.marker = L
-                            .marker([item.geo.lat, item.geo.lng])
-                            .bindPopup(octopus.getItemMarkup(item));
+                    data.forEach(function (item) {
+                        if (item.geo) {
+                            item.marker = L
+                                .marker([item.geo.lat, item.geo.lng])
+                                .bindPopup(octopus.getItemMarkup(item));
 
-                        item.marker._data = item;
-                        markers.push(item.marker);
-                    }
+                            item.marker._data = item;
+                            markers.push(item.marker);
+                        }
+                    });
+
+                    octopus.groups[year] = L.featureGroup.subGroup(octopus.cluster, markers);
+                    octopus.groups[year].addTo(octopus.map);
+                    callback(null);
                 });
+            })
+        });
 
-                octopus.groups[year] = L.featureGroup.subGroup(octopus.cluster, markers);
-
-                octopus.groups[year].addTo(octopus.map);
-            });
+        async.parallel(functions,
+        function(err, results) {
+            octopus.renderChart();
         });
     },
 
@@ -118,6 +127,102 @@ var octopus = {
             }
             L.DomUtil.removeClass(document.body, 'has-tooltip-overlay');
         });
+
+        octopus.map.on('moveend', function () {
+            octopus.renderChart();
+        });
+    },
+
+    getGraphData: function () {
+        var dataItemsObject = {};
+        var dataItemsArray = [];
+        var dataInjuredObject = {};
+        var dataKilledObject = {};
+
+        octopus.map.eachLayer(function (layer) {
+            if (typeof layer.getLatLng == 'function' && octopus.map.getBounds().contains(layer.getLatLng())) {
+                var doForItem = function (object) {
+                    if (!dataItemsObject[Date.parse(object._data.date)]) {
+                        dataItemsObject[Date.parse(object._data.date)] = 1;
+
+                        dataInjuredObject[Date.parse(object._data.date)] = parseInt(object._data.injured);
+                        dataKilledObject[Date.parse(object._data.date)] = parseInt(object._data.killed);
+
+                        dataItemsArray.push(Date.parse(object._data.date));
+                    }
+                    else {
+                        dataInjuredObject[Date.parse(object._data.date)] += parseInt(object._data.injured);
+                        dataKilledObject[Date.parse(object._data.date)] += parseInt(object._data.killed);
+
+                        dataItemsObject[Date.parse(object._data.date)]++;
+                    }
+                };
+
+                if (typeof layer.getAllChildMarkers == 'function') {
+                    layer.getAllChildMarkers().forEach(function (child) {
+                        doForItem(child);
+                    });
+                }
+                else {
+                    doForItem(layer);
+                }
+            }
+        });
+
+        var attacksPerDay = [];
+        var killedPerDay = [];
+        var injuredPerDay = [];
+        
+        dataItemsArray.sort();
+
+        dataItemsArray.forEach(function (epoch) {
+            attacksPerDay.push([epoch, dataItemsObject[epoch]]);
+            killedPerDay.push([epoch, dataKilledObject[epoch]]);
+            injuredPerDay.push([epoch, dataInjuredObject[epoch]]);
+        });
+
+        return [
+            attacksPerDay,
+            killedPerDay,
+            injuredPerDay
+        ];
+    },
+
+    renderChart: function () {
+        var data = octopus.getGraphData();
+
+        if (data.length) {
+            new Highcharts.Chart({
+                chart: {
+                    zoomType: 'x',
+                    renderTo : 'chart',
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    type: 'datetime'
+                },
+                yAxis: {
+                    title: {
+                        text: 'Number of'
+                    }
+                },
+                series: [{
+                    type: 'area',
+                    name: 'Attacks',
+                    data: data[0]
+                },{
+                    type: 'area',
+                    name: 'Killed',
+                    data: data[1]
+                },{
+                    type: 'area',
+                    name: 'Injured',
+                    data: data[2]
+                }]
+            });
+        }
     },
 
     toggleYear: function (year) {
