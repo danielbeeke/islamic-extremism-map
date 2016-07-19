@@ -12,14 +12,15 @@
   &:after {
     top: -100%;
     left: -100%;
-    width: 300vw;
-    height: 300vh;
+    width: 400vw;
+    height: 400vh;
     background-color: black;
     content: '';
     display: block;
     position: absolute;
     opacity: 0;
-    z-index: -1;
+    z-index: -10;
+    pointer-events: none;
     transition: z-index 0s $easing $speed, opacity $speed $easing 0s;
   }
 }

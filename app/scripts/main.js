@@ -9,6 +9,7 @@ var octopus = {
         showCoverageOnHover: false,
         singleMarkerMode: true,
         spiderfyDistanceMultiplier: 2,
+        maxClusterRadius: 95,
         iconCreateFunction: function(cluster) {
             var countInjured = 0;
             var countKilled = 0;
@@ -20,7 +21,26 @@ var octopus = {
 
             var total = countInjured + countKilled;
 
-            var iconSize = 40;
+            var iconSize = 20;
+
+            if (total < 11) {
+                iconSize = 30;
+            }
+            else if (total > 10 && total < 101) {
+                iconSize = 40;
+            }
+            else if (total > 100 && total < 1001) {
+                iconSize = 50;
+            }
+            else if (total > 1000 && total < 10001) {
+                iconSize = 60;
+            }
+            else if (total > 10000 && total < 100001) {
+                iconSize = 70;
+            }
+            else {
+                iconSize = 90;
+            }
 
             var pieSVG = octopus.createPie({
                 size: iconSize,
@@ -84,6 +104,7 @@ var octopus = {
 
         octopus.cluster.on('unspiderfied', function () {
             L.DomUtil.removeClass(document.body, 'has-spider-overlay');
+            L.DomUtil.removeClass(document.body, 'has-tooltip-overlay');
         });
 
         octopus.cluster.on('click', function (e) {
@@ -110,10 +131,17 @@ var octopus = {
 
     getItemMarkup: function (item) {
         var output = '';
-        output += '<div class="row"><label class="label">Killed:</label> <span class="value">' + item.killed + '</span></div>';
-        output += '<div class="row"><label class="label">Injured:</label> <span class="value">' + item.injured + '</span></div>';
-        output += '<div class="row"><label class="label">Location:</label> <span class="value">' + item.city + ', ' + item.country + '</span></div>';
-        output += '<div class="row"><label class="label">Description:</label> <span class="value">' + item.description + '</span></div>';
+        output += '<p>' + item.description + '</p>';
+        if (item.injured > 0) {
+            output += '<div class="injured">' + item.injured + ' injured</div>';
+        }
+
+        if (item.killed > 0) {
+            output += '<div class="killed">' + item.killed + ' killed</div>';
+        }
+
+        output += '<div class="date">' + item.date + '</div>';
+
         return output;
     },
 
@@ -188,5 +216,7 @@ L.Map.include({
 
             popup._container.addEventListener('transitionend', transitionend);
         }
+
+        return that;
     }
 });
