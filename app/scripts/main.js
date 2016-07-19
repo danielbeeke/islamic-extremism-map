@@ -62,6 +62,7 @@ var octopus = {
                 });
 
                 octopus.groups[year] = L.featureGroup.subGroup(octopus.cluster, markers);
+
                 octopus.groups[year].addTo(octopus.map);
             });
         });
@@ -76,6 +77,26 @@ var octopus = {
         }).setView([51.505, -0.09], 3);
         L.tileLayer(octopus.mapLayer).addTo(octopus.map);
         octopus.cluster.addTo(octopus.map);
+
+        octopus.cluster.on('spiderfied', function () {
+            L.DomUtil.addClass(document.body, 'has-spider-overlay');
+        });
+
+        octopus.cluster.on('unspiderfied', function () {
+            L.DomUtil.removeClass(document.body, 'has-spider-overlay');
+        });
+
+        octopus.cluster.on('click', function (e) {
+            e.layer._icon.style.zIndex = 10000;
+            L.DomUtil.addClass(document.body, 'has-tooltip-overlay');
+        });
+
+        octopus.cluster.on('popupclose', function (e) {
+            if (!L.DomUtil.hasClass(document.body, 'has-spider-overlay')) {
+                e.layer._icon.style.zIndex = 0;
+            }
+            L.DomUtil.removeClass(document.body, 'has-tooltip-overlay');
+        });
     },
 
     toggleYear: function (year) {
@@ -148,3 +169,24 @@ var octopus = {
 
 octopus.init();
 window.octopus = octopus;
+
+L.Map.include({
+    closePopup: function (popup) {
+        var that = this;
+        if (!popup || popup === this._popup) {
+            popup = this._popup;
+            this._popup = null;
+        }
+        if (popup) {
+            L.DomUtil.addClass(popup._container, 'is-closing');
+            var transitionend = function () {
+                that.removeLayer(popup);
+                popup._isOpen = false;
+                L.DomUtil.removeClass(popup._container, 'is-closing');
+                popup._container.removeEventListener('transitionend', transitionend);
+            };
+
+            popup._container.addEventListener('transitionend', transitionend);
+        }
+    }
+});

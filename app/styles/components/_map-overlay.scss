@@ -1,0 +1,35 @@
+.leaflet-map-pane,
+.leaflet-marker-pane {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-container {
+  overflow: hidden;
+}
+
+.leaflet-marker-pane {
+  &:after {
+    top: -100%;
+    left: -100%;
+    width: 300vw;
+    height: 300vh;
+    background-color: black;
+    content: '';
+    display: block;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    transition: z-index 0s $easing $speed, opacity $speed $easing 0s;
+  }
+}
+
+body.has-tooltip-overlay, body.has-spider-overlay {
+  .leaflet-marker-pane {
+    &:after {
+      z-index: 1000;
+      opacity: .7;
+      transition: z-index 0s $easing 0s, opacity $speed $easing 0s;
+    }
+  }
+}
