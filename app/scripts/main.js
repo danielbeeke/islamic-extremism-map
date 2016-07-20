@@ -200,31 +200,40 @@ var octopus = {
                     zoomType: 'x',
                     renderTo : 'chart',
                     backgroundColor: 'null',
-                    type: 'area'
+                    type: 'arearange'
                 },
                 title: {
                     text: ''
                 },
+                rangeSelector: {
+                    allButtonsEnabled: true,
+                    selected: 2,
+                    enabled: true
+                },
                 xAxis: {
                     type: 'datetime'
                 },
-                yAxis: {
-                    title: {
-                        text: 'Number of'
-                    }
-                },
+                yAxis: [{
+                    lineWidth: 1,
+                    opposite: true
+                },{
+                    lineWidth: 1,
+                }],
                 series: [{
                     type: 'area',
                     name: 'Attacks',
                     data: data[0],
+                    yAxis: 0,
                     color: '#67b7ff',
                 },{
                     type: 'area',
                     name: 'Killed',
+                    yAxis: 1,
                     color: '#b80000',
                     data: data[1]
                 },{
                     type: 'area',
+                    yAxis: 1,
                     name: 'Injured',
                     color: '#ea7070',
                     data: data[2]

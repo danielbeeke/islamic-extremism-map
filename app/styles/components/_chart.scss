@@ -1,0 +1,21 @@
+.chart {
+  position: absolute;
+  bottom: 0;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+
+  .highcharts-container {
+    position: relative;
+    //top: 72px !important;
+  }
+
+  .highcharts-grid,
+  .highcharts-background {
+    display: none;
+  }
+
+  .highcharts-legend {
+    transform: translate(0 , 0);
+  }
+}
