@@ -1,9 +1,11 @@
-var min = 100;
-var max = 0;
-
 var octopus = {
     workers: {},
     data: {},
+    filters: {
+        date: {
+
+        }
+    },
     map: false,
     cluster: L.markerClusterGroup({
         showCoverageOnHover: false,
@@ -58,6 +60,7 @@ var octopus = {
     }),
     groups: {},
     years: [2011, 2012, 2013, 2014, 2015, 2016],
+    years: [2010],
     mapLayer: 'http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u',
 
     init: function () {
@@ -181,18 +184,44 @@ var octopus = {
             injuredPerDay.push([epoch, dataInjuredObject[epoch]]);
         });
 
-        return [
+        octopus.graphDate = [
             attacksPerDay,
             killedPerDay,
             injuredPerDay
         ];
     },
 
-    renderChart: function () {
-        var data = octopus.getGraphData();
+    filterData: function () {
+        var extremes = octopus.chart.xAxis[0].getExtremes();
+        octopus.filters.date.start = new Date(extremes.min);
+        octopus.filters.date.end = new Date(extremes.max);
 
-        if (data.length) {
-            new Highcharts.Chart({
+        octopus.map.eachLayer(function (layer) {
+            if (typeof layer.getLatLng == 'function' && octopus.map.getBounds().contains(layer.getLatLng())) {
+                if (typeof layer.getAllChildMarkers == 'function') {
+                    layer.getAllChildMarkers().forEach(function (child) {
+                        var itemDate = new Date(child._data.date);
+
+                        if (itemDate > octopus.filters.date.start && itemDate < octopus.filters.date.end) {
+                            octopus.cluster.addLayer(child);
+                        }
+                        else {
+                            octopus.cluster.removeLayer(child);
+                        }
+                    });
+                }
+                else {
+                }
+            }
+        });
+
+    },
+
+    renderChart: function () {
+        octopus.getGraphData();
+
+        if (octopus.graphDate.length) {
+            octopus.chart = new Highcharts.StockChart({
                 credits: {
                     enabled: false
                 },
@@ -200,15 +229,38 @@ var octopus = {
                     zoomType: 'x',
                     renderTo : 'chart',
                     backgroundColor: 'null',
-                    type: 'arearange'
+                    type: 'arearange',
+                    events: {
+                        redraw: function () {
+                            debounce(octopus.filterData, 300, 'filterdata')()
+                        },
+                        selection: function () {
+                            debounce(octopus.filterData, 300, 'filterdata')()
+                        }
+                    }
                 },
                 title: {
                     text: ''
                 },
-                rangeSelector: {
-                    allButtonsEnabled: true,
-                    selected: 2,
-                    enabled: true
+                rangeSelector : {
+                    enabled: true,
+                    buttons: [],
+                    inputEnabled: false
+                },
+                navigator: {
+                    margin: 0,
+
+                },
+                legend: {
+                    enabled: true,
+                    align: 'right',
+                    backgroundColor: '#FCFFC5',
+                    borderColor: 'black',
+                    borderWidth: 2,
+                    layout: 'vertical',
+                    verticalAlign: 'top',
+                    y: 100,
+                    shadow: true
                 },
                 xAxis: {
                     type: 'datetime'
@@ -222,7 +274,7 @@ var octopus = {
                 series: [{
                     type: 'area',
                     name: 'Attacks',
-                    data: data[0],
+                    data: octopus.graphDate[0],
                     yAxis: 0,
                     color: '#67b7ff',
                 },{
@@ -230,13 +282,13 @@ var octopus = {
                     name: 'Killed',
                     yAxis: 1,
                     color: '#b80000',
-                    data: data[1]
+                    data: octopus.graphDate[1]
                 },{
                     type: 'area',
                     yAxis: 1,
                     name: 'Injured',
                     color: '#ea7070',
-                    data: data[2]
+                    data: octopus.graphDate[2]
                 }]
             });
         }
@@ -342,3 +394,13 @@ L.Map.include({
         return that;
     }
 });
+
+
+function debounce(callback, time) {
+    var timeout;
+
+    return function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(callback, time);
+    };
+};
