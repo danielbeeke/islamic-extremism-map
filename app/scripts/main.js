@@ -6,9 +6,12 @@ var octopus = {
 
         }
     },
+    filterTimeout: false,
     map: false,
     cluster: L.markerClusterGroup({
         showCoverageOnHover: false,
+        //chunkedLoading: true,
+        //chunkProgress: updateProgressBar,
         singleMarkerMode: true,
         spiderfyDistanceMultiplier: 2,
         maxClusterRadius: 95,
@@ -60,7 +63,7 @@ var octopus = {
     }),
     groups: {},
     years: [2011, 2012, 2013, 2014, 2015, 2016],
-    years: [2010],
+    //years: [2010],
     mapLayer: 'http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u',
 
     init: function () {
@@ -70,11 +73,11 @@ var octopus = {
 
     loadMarkers: function () {
         var functions = [];
+        var markers = [];
 
         octopus.years.forEach(function (year) {
             functions.push(function (callback) {
                 octopus.getYearViaWorker(year, function (data) {
-                    var markers = [];
 
                     data.forEach(function (item) {
                         if (item.geo) {
@@ -87,8 +90,6 @@ var octopus = {
                         }
                     });
 
-                    octopus.groups[year] = L.featureGroup.subGroup(octopus.cluster, markers);
-                    octopus.groups[year].addTo(octopus.map);
                     callback(null);
                 });
             })
@@ -96,6 +97,7 @@ var octopus = {
 
         async.parallel(functions,
         function(err, results) {
+            octopus.cluster.addLayers(markers);
             octopus.renderChart();
         });
     },
@@ -184,7 +186,7 @@ var octopus = {
             injuredPerDay.push([epoch, dataInjuredObject[epoch]]);
         });
 
-        octopus.graphDate = [
+        octopus.graphData = [
             attacksPerDay,
             killedPerDay,
             injuredPerDay
@@ -192,35 +194,44 @@ var octopus = {
     },
 
     filterData: function () {
-        var extremes = octopus.chart.xAxis[0].getExtremes();
-        octopus.filters.date.start = new Date(extremes.min);
-        octopus.filters.date.end = new Date(extremes.max);
+        if (octopus.filterTimeout) {
+            clearTimeout(octopus.filterTimeout);
+        }
 
-        octopus.map.eachLayer(function (layer) {
-            if (typeof layer.getLatLng == 'function' && octopus.map.getBounds().contains(layer.getLatLng())) {
-                if (typeof layer.getAllChildMarkers == 'function') {
-                    layer.getAllChildMarkers().forEach(function (child) {
-                        var itemDate = new Date(child._data.date);
+        octopus.filterTimeout = setTimeout(function () {
+            var itemsToAdd = [];
+            var itemsToRemove = [];
+            var extremes = octopus.chart.xAxis[0].getExtremes();
+            octopus.filters.date.start = new Date(extremes.min);
+            octopus.filters.date.end = new Date(extremes.max);
 
-                        if (itemDate > octopus.filters.date.start && itemDate < octopus.filters.date.end) {
-                            octopus.cluster.addLayer(child);
+            octopus.years.forEach(function (year) {
+                octopus.data[year].forEach(function (item) {
+                    if (item.date && item.marker) {
+                        if (new Date(item.date) >= octopus.filters.date.start && new Date(item.date) <= octopus.filters.date.end) {
+                            if (!octopus.cluster.hasLayer(item.marker)) {
+                                itemsToAdd.push(item.marker);
+                            }
                         }
                         else {
-                            octopus.cluster.removeLayer(child);
+                            if (octopus.cluster.hasLayer(item.marker)) {
+                                itemsToRemove.push(item.marker);
+                            }
                         }
-                    });
-                }
-                else {
-                }
-            }
-        });
+                    }
+                });
+            });
 
+            octopus.cluster.addLayers(itemsToAdd);
+            octopus.cluster.removeLayers(itemsToRemove);
+            octopus.cluster.refreshClusters();
+        }, 400);
     },
 
     renderChart: function () {
         octopus.getGraphData();
 
-        if (octopus.graphDate.length) {
+        if (octopus.graphData.length) {
             octopus.chart = new Highcharts.StockChart({
                 credits: {
                     enabled: false
@@ -232,10 +243,10 @@ var octopus = {
                     type: 'arearange',
                     events: {
                         redraw: function () {
-                            debounce(octopus.filterData, 300, 'filterdata')()
+                            octopus.filterData();
                         },
                         selection: function () {
-                            debounce(octopus.filterData, 300, 'filterdata')()
+                            octopus.filterData();
                         }
                     }
                 },
@@ -248,47 +259,69 @@ var octopus = {
                     inputEnabled: false
                 },
                 navigator: {
-                    margin: 0,
+                    margin: 20,
 
+                },
+                plotOptions: {
+                    series: {
+                        animation: false,
+                        states: {
+                            hover: {
+                                enabled: false
+                            }
+                        }
+                    },
+                    column: {
+                        stacking: 'normal'
+                    }
                 },
                 legend: {
                     enabled: true,
+                    useHTML: true,
                     align: 'right',
-                    backgroundColor: '#FCFFC5',
-                    borderColor: 'black',
-                    borderWidth: 2,
-                    layout: 'vertical',
-                    verticalAlign: 'top',
-                    y: 100,
-                    shadow: true
+                    layout: 'horizontal',
+                    verticalAlign: 'bottom',
+                    y: 0,
                 },
                 xAxis: {
-                    type: 'datetime'
+                    type: 'datetime',
+                    useHTML: true,
+                    labels: {
+                        formatter: function() { // only output a label on the days of interest
+                            if (this.isFirst || this.isLast) {
+                                return Highcharts.dateFormat(this.dateTimeLabelFormat, this.value);
+                            }
+                        }
+                    }
                 },
                 yAxis: [{
                     lineWidth: 1,
-                    opposite: true
+                    opposite: true,
+                    visible: false,
+                    maxPadding: 0.6
                 },{
                     lineWidth: 1,
+                    visible: false
                 }],
                 series: [{
-                    type: 'area',
+                    type: 'spline',
                     name: 'Attacks',
-                    data: octopus.graphDate[0],
+                    showInLegend: false,
+                    data: octopus.graphData[0],
                     yAxis: 0,
                     color: '#67b7ff',
                 },{
-                    type: 'area',
-                    name: 'Killed',
-                    yAxis: 1,
-                    color: '#b80000',
-                    data: octopus.graphDate[1]
-                },{
-                    type: 'area',
+                    type: 'column',
                     yAxis: 1,
                     name: 'Injured',
                     color: '#ea7070',
-                    data: octopus.graphDate[2]
+                    data: octopus.graphData[2]
+                },{
+                    type: 'column',
+                    name: 'Killed',
+                    yAxis: 1,
+                    color: '#b80000',
+                    data: octopus.graphData[1]
                 }]
             });
         }
@@ -394,13 +427,3 @@ L.Map.include({
         return that;
     }
 });
-
-
-function debounce(callback, time) {
-    var timeout;
-
-    return function() {
-        clearTimeout(timeout);
-        timeout = setTimeout(callback, time);
-    };
-};
