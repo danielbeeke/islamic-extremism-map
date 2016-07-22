@@ -15,51 +15,7 @@ var octopus1 = {
         singleMarkerMode: true,
         spiderfyDistanceMultiplier: 2,
         maxClusterRadius: 95,
-        iconCreateFunction: function(cluster) {
-            var countInjured = 0;
-            var countKilled = 0;
-
-            cluster.getAllChildMarkers().forEach(function (child) {
-                countInjured = countInjured + parseInt(child._data.injured);
-                countKilled = countKilled + parseInt(child._data.killed);
-            });
-
-            var total = countInjured + countKilled;
-
-            var iconSize = 20;
-
-            if (total < 11) {
-                iconSize = 30;
-            }
-            else if (total > 10 && total < 101) {
-                iconSize = 40;
-            }
-            else if (total > 100 && total < 1001) {
-                iconSize = 50;
-            }
-            else if (total > 1000 && total < 10001) {
-                iconSize = 60;
-            }
-            else if (total > 10000 && total < 100001) {
-                iconSize = 70;
-            }
-            else {
-                iconSize = 90;
-            }
-
-            var pieSVG = octopus.createPie({
-                size: iconSize,
-                items: [countKilled, countInjured],
-                colors: ['#ea7070', '#b80000']
-            });
-
-            var markup = pieSVG.outerHTML + '<span class="number">' + total + '</span>';
-
-            return new L.DivIcon({
-                html: markup,
-                iconSize: L.point(iconSize, iconSize)
-            });
-        }
+        iconCreateFunction:
     }),
     groups: {},
     years: [2011, 2012, 2013, 2014, 2015, 2016],

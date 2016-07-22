@@ -1,15 +1,15 @@
 octopus.years = [2011, 2012, 2013, 2014, 2015, 2016];
 //octopus.years = [2010];
 
-var southWest = L.latLng(27.653226, 73.3831843),
-    northEast = L.latLng(41.653226, -81.3831843),
-    bounds = L.latLngBounds(southWest, northEast);
+var bounds = L.latLngBounds([[[-41.1328125,-5.090944175],[-41.1328125,60.326947743],[107.75390625,60.326947743],[107.75390625,-5.090944175],[-41.1328125,-5.090944175]]]);
+
+octopus.map.init();
 
 octopus.data.getFiltered(function (filteredData) {
-    console.log(filteredData)
+    octopus.map.render(filteredData);
 },
     Date.parse('2011-01-01'),
-    Date.parse('2011-08-01'),
+    Date.parse('2015-08-01'),
     ['killed', 'injured'],
     bounds
 );

@@ -6,7 +6,8 @@
     "leaflet.markercluster": "Leaflet/Leaflet.markercluster#^0.5.0",
     "Leaflet.FeatureGroup.SubGroup": "ghybs/Leaflet.FeatureGroup.SubGroup#^1.0.0",
     "async": "^2.0.0",
-    "highcharts": "^4.2.5"
+    "highcharts": "^4.2.5",
+    "leaflet-hash": "mlevans/leaflet-hash"
   },
   "devDependencies": {
     "chai": "^3.5.0",

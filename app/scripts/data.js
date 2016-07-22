@@ -54,11 +54,11 @@ octopus.data = {
                     itemShouldBeIncluded = false;
                 }
 
-                if (types.constructor === Array && types.length && !octopus.data._survivedFilterByTypes(item, types)) {
+                if (types && types.constructor === Array && types.length && !octopus.data._survivedFilterByTypes(item, types)) {
                     itemShouldBeIncluded = false;
                 }
 
-                if (bounds && bounds.isValid && bounds.isValid() && !octopus.data._survivedFilterByBounds(item, bounds)) {
+                if (bounds && !octopus.data._survivedFilterByBounds(item, bounds)) {
                     itemShouldBeIncluded = false;
                 }
 
@@ -74,8 +74,8 @@ octopus.data = {
     },
 
     _survivedFilterByBounds: function (item, bounds) {
-        if (item.lat && item.lng) {
-            return bounds.contains([item.lat, item.lng]);
+        if (item.geo.lat && item.geo.lng) {
+            return bounds.contains(L.latLng(item.geo.lat, item.geo.lng));
         }
     },
 
