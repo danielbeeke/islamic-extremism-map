@@ -44,7 +44,12 @@ octopus.data = {
         }
     },
 
-    getFiltered: function (callback, minDate, maxDate, types, bounds) {
+    getFiltered: function (callback, filters) {
+        var minDate = filters.minDate ? filters.minDate : false;
+        var maxDate = filters.maxDate ? filters.maxDate : false;
+        var types = filters.types ? filters.types : [];
+        var bounds = filters.bounds ? filters.bounds : null;
+
         var filteredData = [];
 
         octopus.data.get(function (data) {

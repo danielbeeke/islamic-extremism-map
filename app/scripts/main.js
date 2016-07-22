@@ -5,11 +5,14 @@ var bounds = L.latLngBounds([[[-41.1328125,-5.090944175],[-41.1328125,60.3269477
 
 octopus.map.init();
 
+var filters = {
+    minDate: Date.parse('2011-01-01'),
+    maxDate: Date.parse('2015-08-01'),
+    types: ['killed', 'injured'],
+    bounds: bounds
+};
+
 octopus.data.getFiltered(function (filteredData) {
     octopus.map.render(filteredData);
-},
-    Date.parse('2011-01-01'),
-    Date.parse('2015-08-01'),
-    ['killed', 'injured'],
-    bounds
-);
+    octopus.graph.render(filteredData);
+}, filters);
