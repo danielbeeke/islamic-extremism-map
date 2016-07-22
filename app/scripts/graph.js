@@ -110,13 +110,18 @@ octopus.graph = {
                             return Highcharts.dateFormat(this.dateTimeLabelFormat, this.value);
                         }
                     }
+                },
+                events: {
+                    setExtremes: debounce(function () {
+                        octopus.map._hash.onMapMove();
+                    }, 100)
                 }
             },
             yAxis: [{
                 lineWidth: 1,
                 opposite: true,
                 visible: false,
-                maxPadding: 0.6
+                maxPadding: 0.6,
             },{
                 lineWidth: 1,
                 visible: false

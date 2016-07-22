@@ -83,6 +83,7 @@ octopus.map = {
     init: function () {
         octopus.map._map = L.map('map', octopus.map._mapSettings).setView([51.505, -0.09], 3);
         octopus.map._hash = new L.Hash(octopus.map._map);
+        octopus.router.init();
         L.tileLayer(octopus.map._tiles).addTo(octopus.map._map);
         octopus.map._cluster = L.markerClusterGroup(octopus.map._clusterSettings);
         octopus.map._cluster.addTo(octopus.map._map);

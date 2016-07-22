@@ -24,3 +24,19 @@ L.Map.include({
         return that;
     }
 });
+
+function debounce(callback, time) {
+    var timeout;
+
+    return function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(callback, time);
+    };
+};
+
+function formatDate (date) {
+    var year = date.getFullYear();
+    var month = ("0" + (date.getMonth()+1)).slice(-2);
+    var day = ("0" + date.getDate()).slice(-2);
+    return year + "-" + month + "-" + day;
+}
