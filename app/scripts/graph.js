@@ -4,7 +4,7 @@ window.octopus = window.octopus ? window.octopus : {};
 
 octopus.graph = {
     render: function (data, callback) {
-        var continueRender = function () {
+        octopus.graph.init(function () {
             var seriesObject = octopus.graph._prepare(data);
 
             octopus.graph._graph.series[0].setData(seriesObject['days'], true);
@@ -14,17 +14,7 @@ octopus.graph = {
             if (typeof callback == 'function') {
                 callback();
             }
-        };
-
-        if (!octopus.graph._graph) {
-            octopus.graph.init(function () {
-                continueRender();
-            });
-        }
-        else {
-            while (octopus.graph._graph.series.length > 0) octopus.graph._graph.series[0].remove(true);
-            continueRender();
-        }
+        });
     },
 
     _prepare: function (data) {
@@ -130,6 +120,8 @@ octopus.graph = {
                 events: {
                     setExtremes: debounce(function () {
                         octopus.map._hash.onMapMove();
+                        var filters = octopus.getFilters();
+                        octopus.renderMap(filters);
                     }, 100)
                 }
             },
