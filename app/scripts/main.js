@@ -15,11 +15,27 @@ octopus.getFilters = function () {
         bounds = octopus.map.calculateBoundsByCenterAndZoom(hashFilters.center, hashFilters.zoom);
     }
 
+    var start, end;
+    if (octopus.graph._graph) {
+        var extremes = octopus.graph._graph.xAxis[0].getExtremes();
+        var startValue = extremes.userMin ? extremes.userMin : extremes.dataMin;
+        start = new Date(startValue);
+        var endValue = extremes.userMax ? extremes.userMax : extremes.dataMax;
+        end = new Date(endValue);
+    }
+    else {
+        start = hashFilters.start ? Date.parse(hashFilters.start) : null;
+        end = hashFilters.end ? Date.parse(hashFilters.end) : null;
+
+    }
+
     octopus.filters = {
-        minDate: hashFilters.start ? Date.parse(hashFilters.start) : null,
-        maxDate: hashFilters.end ? Date.parse(hashFilters.end) : null,
+        minDate: start,
+        maxDate: end,
         types: types,
-        bounds: bounds ? bounds : null
+        bounds: bounds ? bounds : null,
+        center: hashFilters.center ? hashFilters.center : null,
+        zoom: hashFilters.zoom ? hashFilters.zoom : null
     };
 
     return octopus.filters;
@@ -50,7 +66,7 @@ octopus.renderGraph = function (filters, callback) {
             if (typeof callback == 'function') {
                 callback(null);
             }
-        });
+        }, filters);
     }, graphFilters);
 };
 

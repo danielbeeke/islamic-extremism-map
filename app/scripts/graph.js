@@ -3,13 +3,21 @@ window.octopus = window.octopus ? window.octopus : {};
 // TODO fix the labels in the popup to include date till date.
 
 octopus.graph = {
-    render: function (data, callback) {
+    render: function (data, callback, orginalFilters) {
         octopus.graph.init(function () {
             var seriesObject = octopus.graph._prepare(data);
 
             octopus.graph._graph.series[0].setData(seriesObject['days'], true);
             octopus.graph._graph.series[1].setData(seriesObject['injured'], true);
             octopus.graph._graph.series[2].setData(seriesObject['killed'], true);
+
+            var startDate = new Date(orginalFilters.minDate);
+            var endDate = new Date(orginalFilters.maxDate);
+
+            octopus.graph._graph.xAxis[0].setExtremes(
+                Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate()),
+                Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate())
+            );
 
             if (typeof callback == 'function') {
                 callback();

@@ -64,6 +64,7 @@ octopus.router = {
             return;
         }
         var parsed = this.parseHash(hash);
+
         if (parsed) {
             this.movingMap = true;
 

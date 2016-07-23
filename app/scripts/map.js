@@ -26,7 +26,7 @@ octopus.map = {
         });
 
         tempMap.getSize = function () {
-            return new L.Point(window.innerWidth, window.innerHeight);
+            return new L.Point(window.innerWidth, window.innerHeight - 300);
         };
 
         return tempMap.getBounds();
@@ -95,15 +95,19 @@ octopus.map = {
     },
 
     init: function (callback) {
-        octopus.map._map = L.map('map', octopus.map._mapSettings).setView([51.505, -0.09], 3);
+        var zoom = octopus.filters.zoom ? octopus.filters.zoom : 2;
+        var center = octopus.filters.center ? octopus.filters.center : [51.505, -0.09];
+
+        octopus.map._map = L.map('map', octopus.map._mapSettings);
         L.tileLayer(octopus.map._tiles).addTo(octopus.map._map);
+        octopus.map._map.setView(center, zoom, { animate: false });
         octopus.map._cluster = L.markerClusterGroup(octopus.map._clusterSettings);
         octopus.map._cluster.addTo(octopus.map._map);
 
-        octopus.map._map.on('viewreset, moveend', function () {
+        octopus.map._map.on('viewreset, moveend', debounce(function () {
             var filters = octopus.getFilters();
             octopus.renderGraph(filters);
-        });
+        }, 100));
 
         if (typeof callback == 'function') {
             callback();
