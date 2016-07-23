@@ -1,5 +1,7 @@
 window.octopus = window.octopus ? window.octopus : {};
 
+// TODO fix the labels in the popup to include date till date.
+
 octopus.graph = {
     render: function (data, callback) {
         var continueRender = function () {
@@ -96,6 +98,11 @@ octopus.graph = {
                         hover: {
                             enabled: false
                         }
+                    },
+                    events: {
+                        legendItemClick: debounce(function () {
+                            octopus.map._hash.onMapMove();
+                        }, 100)
                     }
                 },
                 column: {
@@ -130,7 +137,7 @@ octopus.graph = {
                 lineWidth: 1,
                 opposite: true,
                 visible: false,
-                maxPadding: 0.6,
+                maxPadding: 0.6
             },{
                 lineWidth: 1,
                 visible: false
@@ -139,21 +146,23 @@ octopus.graph = {
                 type: 'spline',
                 name: 'Attacks',
                 showInLegend: false,
-                data: [],
                 yAxis: 0,
                 color: '#67b7ff',
-            },{
-                type: 'column',
-                yAxis: 1,
-                name: 'Injured',
-                color: '#ea7070',
                 data: []
             },{
                 type: 'column',
                 name: 'Killed',
                 yAxis: 1,
                 color: '#b80000',
-                data: []
+                data: [],
+                weight: 1
+            }, {
+                type: 'column',
+                yAxis: 1,
+                name: 'Injured',
+                color: '#ea7070',
+                data: [],
+                weight: 0
             }]
         });
 

@@ -4,7 +4,7 @@ octopus.map = {
     _tiles: 'http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u',
     _mapSettings: {
         attributionControl: false,
-        minZoom: 3,
+        minZoom: 2,
         maxZoom: 8,
         zoomControl: false
     },
