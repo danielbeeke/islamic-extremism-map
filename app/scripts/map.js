@@ -20,8 +20,9 @@ octopus.map = {
 
     calculateBoundsByCenterAndZoom: function (center, zoom) {
         var tempMap = new L.Map(document.createElement('div'), {
-            'center': center,
-            'zoom': zoom
+            center: center,
+            zoom: zoom,
+            worldCopyJump: true // http://stackoverflow.com/questions/18063278/leaflet-getbounds-returning-longitudes-greater-than-180
         });
 
         tempMap.getSize = function () {
