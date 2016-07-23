@@ -36,13 +36,13 @@ function debounce(callback, time) {
 
 function formatDate (date) {
     var year = date.getFullYear();
-    var month = ("0" + (date.getMonth()+1)).slice(-2);
-    var day = ("0" + date.getDate()).slice(-2);
-    return year + "-" + month + "-" + day;
+    var month = ('0' + (date.getMonth()+1)).slice(-2);
+    var day = ('0' + date.getDate()).slice(-2);
+    return year + '-' + month + '-' + day;
 }
 
 function extend(from, to) {
-    if (from == null || typeof from != "object") return from;
+    if (from == null || typeof from != 'object') return from;
     if (from.constructor != Object && from.constructor != Array) return from;
     if (from.constructor == Date || from.constructor == RegExp || from.constructor == Function ||
         from.constructor == String || from.constructor == Number || from.constructor == Boolean)
@@ -52,7 +52,7 @@ function extend(from, to) {
 
     for (var name in from)
     {
-        to[name] = typeof to[name] == "undefined" ? extend(from[name], null) : to[name];
+        to[name] = typeof to[name] == 'undefined' ? extend(from[name], null) : to[name];
     }
 
     return to;

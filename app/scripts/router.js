@@ -3,7 +3,7 @@ octopus.router = {
         if (hash.indexOf('#') === 0) {
             hash = hash.substr(1);
         }
-        var args = hash.split("/");
+        var args = hash.split('/');
 
         if (args.length == 7) {
             var zoom = parseInt(args[0], 10),
@@ -48,14 +48,14 @@ octopus.router = {
         var killed = octopus.graph._graph.series[1].visible | 0;
         var injured = octopus.graph._graph.series[2].visible | 0;
 
-        return "#" + [zoom,
+        return '#' + [zoom,
                 center.lat.toFixed(precision),
                 center.lng.toFixed(precision),
                 start,
                 end,
                 killed,
                 injured
-            ].join("/");
+            ].join('/');
     },
 
     update: function() {
