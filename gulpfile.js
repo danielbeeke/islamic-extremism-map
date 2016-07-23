@@ -142,7 +142,7 @@ gulp.task('serve:dist', () => {
 
 gulp.task('copy', function() {
   gulp.src('app/scripts/worker.data.get.js')
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('dist/scripts'));
 
   gulp.src('app/json/*')
       .pipe(gulp.dest('dist/json'));
