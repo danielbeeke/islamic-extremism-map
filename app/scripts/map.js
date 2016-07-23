@@ -18,6 +18,19 @@ octopus.map = {
         }
     },
 
+    calculateBoundsByCenterAndZoom: function (center, zoom) {
+        var tempMap = new L.Map(document.createElement('div'), {
+            'center': center,
+            'zoom': zoom
+        });
+
+        tempMap.getSize = function () {
+            return new L.Point(400, 300);
+        };
+
+        return tempMap.getBounds();
+    },
+
     _markerIconCallback: function (cluster) {
         var countInjured = 0;
         var countKilled = 0;

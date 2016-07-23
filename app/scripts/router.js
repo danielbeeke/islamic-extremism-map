@@ -5,8 +5,6 @@ octopus.router = {
         }
         var args = hash.split("/");
 
-        console.log(args)
-
         if (args.length == 7) {
             var zoom = parseInt(args[0], 10),
                 lat = parseFloat(args[1]),
