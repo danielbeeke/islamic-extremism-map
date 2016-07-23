@@ -80,35 +80,46 @@ octopus.map = {
         return output;
     },
 
-    init: function () {
+    init: function (callback) {
         octopus.map._map = L.map('map', octopus.map._mapSettings).setView([51.505, -0.09], 3);
-        octopus.map._hash = new L.Hash(octopus.map._map);
-        octopus.router.init();
         L.tileLayer(octopus.map._tiles).addTo(octopus.map._map);
         octopus.map._cluster = L.markerClusterGroup(octopus.map._clusterSettings);
         octopus.map._cluster.addTo(octopus.map._map);
+
+        if (typeof callback == 'function') {
+            callback();
+        }
     },
 
-    render: function (data) {
+    render: function (data, callback) {
+        var continueRender = function () {
+            var markers = [];
+
+            data.forEach(function (item) {
+                if (item.geo && item.geo.lat) {
+                    item._marker = L.marker([item.geo.lat, item.geo.lng])
+                        .bindPopup(octopus.map._getItemMarkup(item));
+                    item._marker._data = item;
+                    markers.push(item._marker);
+                }
+            });
+
+            octopus.map._cluster.addLayers(markers);
+
+            if (typeof callback == 'function') {
+                callback();
+            }
+        };
+
         if (!octopus.map._map) {
-            octopus.map.init();
+            octopus.map.init(function () {
+                continueRender();
+            });
         }
         else {
             octopus.map._cluster.clearLayers();
+            continueRender();
         }
-
-        var markers = [];
-
-        data.forEach(function (item) {
-            if (item.geo && item.geo.lat) {
-                item._marker = L.marker([item.geo.lat, item.geo.lng])
-                .bindPopup(octopus.map._getItemMarkup(item));
-                item._marker._data = item;
-                markers.push(item._marker);
-            }
-        });
-
-        octopus.map._cluster.addLayers(markers);
     },
 
 };

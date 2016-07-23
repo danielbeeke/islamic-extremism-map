@@ -15,8 +15,19 @@ octopus.init = function () {
     };
 
     octopus.data.getFiltered(function (filteredData) {
-        octopus.graph.render(filteredData);
-        octopus.map.render(filteredData);
+        async.parallel([
+            function (callback) {
+                octopus.graph.render(filteredData, function () {
+                    callback(null);
+                });
+            }, function (callback) {
+                octopus.map.render(filteredData, function () {
+                    callback(null);
+                });
+            }
+        ], function (err, results) {
+            octopus.router.init();
+        });
     }, filters);
 };
 

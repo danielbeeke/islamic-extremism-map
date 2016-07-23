@@ -1,19 +1,28 @@
 window.octopus = window.octopus ? window.octopus : {};
 
 octopus.graph = {
-    render: function (data) {
+    render: function (data, callback) {
+        var continueRender = function () {
+            var seriesObject = octopus.graph._prepare(data);
+
+            octopus.graph._graph.series[0].setData(seriesObject['days'], true);
+            octopus.graph._graph.series[1].setData(seriesObject['injured'], true);
+            octopus.graph._graph.series[2].setData(seriesObject['killed'], true);
+
+            if (typeof callback == 'function') {
+                callback();
+            }
+        };
+
         if (!octopus.graph._graph) {
-            octopus.graph.init();
+            octopus.graph.init(function () {
+                continueRender();
+            });
         }
         else {
             while (octopus.graph._graph.series.length > 0) octopus.graph._graph.series[0].remove(true);
+            continueRender();
         }
-
-        var seriesObject = octopus.graph._prepare(data);
-
-        octopus.graph._graph.series[0].setData(seriesObject['days'], true);
-        octopus.graph._graph.series[1].setData(seriesObject['injured'], true);
-        octopus.graph._graph.series[2].setData(seriesObject['killed'], true);
     },
 
     _prepare: function (data) {
@@ -58,7 +67,7 @@ octopus.graph = {
         }
     },
 
-    init: function () {
+    init: function (callback) {
         octopus.graph._graph = new Highcharts.StockChart({
             credits: {
                 enabled: false
@@ -147,5 +156,9 @@ octopus.graph = {
                 data: []
             }]
         });
+
+        if (typeof callback == 'function') {
+            callback();
+        }
     }
 };
