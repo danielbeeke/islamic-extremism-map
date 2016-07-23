@@ -11,13 +11,15 @@ octopus.graph = {
             octopus.graph._graph.series[1].setData(seriesObject['injured'], true);
             octopus.graph._graph.series[2].setData(seriesObject['killed'], true);
 
-            var startDate = new Date(orginalFilters.minDate);
-            var endDate = new Date(orginalFilters.maxDate);
+            if (orginalFilters.minDate && orginalFilters.maxDate) {
+                var startDate = new Date(orginalFilters.minDate);
+                var endDate = new Date(orginalFilters.maxDate);
 
-            octopus.graph._graph.xAxis[0].setExtremes(
-                Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate()),
-                Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate())
-            );
+                octopus.graph._graph.xAxis[0].setExtremes(
+                    Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate()),
+                    Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate())
+                );
+            }
 
             if (typeof callback == 'function') {
                 callback();
