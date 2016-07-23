@@ -17,7 +17,9 @@ octopus.graph = {
 
                 octopus.graph._graph.xAxis[0].setExtremes(
                     Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate()),
-                    Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate())
+                    Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate()),
+                    true,
+                    false
                 );
             }
 
