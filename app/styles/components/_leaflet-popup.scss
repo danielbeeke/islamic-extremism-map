@@ -27,6 +27,7 @@ a.leaflet-popup-close-button {
     background-color: $blue-light;
   }
 
+  .city-country,
   .killed, .injured, .date {
     display: inline-block;
     vertical-align: middle;
@@ -35,6 +36,11 @@ a.leaflet-popup-close-button {
     color: white;
     border-radius: 2px;
     margin-right: 10px;
+    margin-top: 8px;
+  }
+
+  .city-country {
+    background-color: gray;
   }
 
   &.is-closing {

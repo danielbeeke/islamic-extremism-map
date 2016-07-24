@@ -2,4 +2,9 @@
   background: black;
   height: calc(100% - 300px);
   width: 100%;
+  position: absolute;
+}
+
+#tempmap {
+  z-index: -1;
 }

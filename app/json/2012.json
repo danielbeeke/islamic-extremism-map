@@ -17034,10 +17034,7 @@
         "killed": "2",
         "injured": "0",
         "description": "A father and son are kidnapped by Taliban in uniforms and executed in captivity.",
-        "geo": {
-            "lat": 51.4689732,
-            "lng": -0.1697071
-        }
+        "geo": "false"
     },
     {
         "date": "2012-06-22",

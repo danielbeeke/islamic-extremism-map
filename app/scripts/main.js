@@ -42,17 +42,19 @@ octopus.getFilters = function () {
 };
 
 octopus.init = function () {
-    var filters = octopus.getFilters();
-    async.series([
-        function (callback) {
-            octopus.renderGraph(filters, callback);
-        },
+    octopus.map.init(function () {
+        var filters = octopus.getFilters();
+        async.series([
+            function (callback) {
+                octopus.renderGraph(filters, callback);
+            },
 
-        function (callback) {
-            octopus.renderMap(filters, callback);
-        }
-    ], function () {
-        octopus.router.init();
+            function (callback) {
+                octopus.renderMap(filters, callback);
+            }
+        ], function () {
+            octopus.router.init();
+        });
     });
 };
 
@@ -84,3 +86,15 @@ octopus.renderMap = function (filters, callback) {
 };
 
 octopus.init();
+
+octopus.check = function () {
+    var bounds1 = octopus.map.calculateBoundsByCenterAndZoom([59.47, 45.09], 4);
+    var bounds2 = octopus.map._map.getBounds();
+
+    console.log(octopus.map._map.getSize())
+
+    console.log(bounds1, bounds2);
+
+    console.log(bounds1.toBBoxString());
+    console.log(bounds2.toBBoxString())
+};

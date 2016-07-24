@@ -8,8 +8,8 @@ octopus.graph = {
             var seriesObject = octopus.graph._prepare(data);
 
             octopus.graph._graph.series[0].setData(seriesObject['days'], true);
-            octopus.graph._graph.series[1].setData(seriesObject['injured'], true);
-            octopus.graph._graph.series[2].setData(seriesObject['killed'], true);
+            octopus.graph._graph.series[1].setData(seriesObject['killed'], true);
+            octopus.graph._graph.series[2].setData(seriesObject['injured'], true);
 
             if (orginalFilters.minDate && orginalFilters.maxDate) {
                 var startDate = new Date(orginalFilters.minDate);
@@ -134,7 +134,7 @@ octopus.graph = {
                         octopus.map._hash.onMapMove();
                         var filters = octopus.getFilters();
                         octopus.renderMap(filters);
-                    }, 100)
+                    }, 200)
                 }
             },
             yAxis: [{

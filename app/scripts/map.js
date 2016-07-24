@@ -6,7 +6,8 @@ octopus.map = {
         attributionControl: false,
         minZoom: 2,
         maxZoom: 8,
-        zoomControl: false
+        zoomControl: false,
+        worldCopyJump: true
     },
     _clusterSettings: {
         showCoverageOnHover: false,
@@ -19,17 +20,21 @@ octopus.map = {
     },
 
     calculateBoundsByCenterAndZoom: function (center, zoom) {
-        var tempMap = new L.Map(document.createElement('div'), {
-            center: center,
-            zoom: zoom,
+        var tempMap = L.map('tempmap', {
             worldCopyJump: true // http://stackoverflow.com/questions/18063278/leaflet-getbounds-returning-longitudes-greater-than-180
         });
+
+        tempMap.setView(center, zoom, { animate: false });
 
         tempMap.getSize = function () {
             return new L.Point(window.innerWidth, window.innerHeight - 300);
         };
 
-        return tempMap.getBounds();
+        var bounds = tempMap.getBounds();
+
+        tempMap.remove();
+
+        return bounds;
     },
 
     _markerIconCallback: function (cluster) {
@@ -90,13 +95,14 @@ octopus.map = {
         }
 
         output += '<div class="date">' + item.date + '</div>';
+        output += '<div class="city-country">' + item.city + ', ' + item.country + '</div>';
 
         return output;
     },
 
     init: function (callback) {
-        var zoom = octopus.filters.zoom ? octopus.filters.zoom : 2;
-        var center = octopus.filters.center ? octopus.filters.center : [51.505, -0.09];
+        var zoom = octopus.filters && octopus.filters.zoom ? octopus.filters.zoom : 2;
+        var center = octopus.filters && octopus.filters.center ? octopus.filters.center : [51.505, -0.09];
 
         octopus.map._map = L.map('map', octopus.map._mapSettings);
         L.tileLayer(octopus.map._tiles).addTo(octopus.map._map);
