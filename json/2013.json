@@ -66,7 +66,10 @@
         "killed": "3",
         "injured": "16",
         "description": "Fulani gunmen fire into a church during a New Years Eve service, killing three worshippers, including a 14-year-old girl.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-12-31",
@@ -112,8 +115,8 @@
         "injured": "5",
         "description": "An Islamist IED takes the lives of two passersby.",
         "geo": {
-            "lat": 43.2562013,
-            "lng": 46.5893353
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -195,7 +198,10 @@
         "killed": "4",
         "injured": "0",
         "description": "Boko Haram shoot four people to death at a Christian village.",
-        "geo": false
+        "geo": {
+            "lat": 10.4851084,
+            "lng": 12.428028
+        }
     },
     {
         "date": "2013-12-29",
@@ -277,8 +283,8 @@
         "injured": "1",
         "description": "The Taliban fire a rocket into a village, killing a local.",
         "geo": {
-            "lat": 31.3133333,
-            "lng": 68.1772222
+            "lat": 33.93911,
+            "lng": 67.709953
         }
     },
     {
@@ -336,7 +342,10 @@
         "killed": "8",
         "injured": "3",
         "description": "Pro-Sharia advocates storm a bachelor party and randomly shoot guests.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-12-27",
@@ -454,8 +463,8 @@
         "injured": "2",
         "description": "A family is attacked for selling alcohol.  Fundamentalists manage to kill an 11-year-old girl.",
         "geo": {
-            "lat": 43.2758213,
-            "lng": 46.7300011
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -574,8 +583,8 @@
         "injured": "17",
         "description": "Two Shia pilgrims are sent to Allah by Sunni bombers.",
         "geo": {
-            "lat": 36.3517681,
-            "lng": 43.3793061
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -682,8 +691,8 @@
         "injured": "0",
         "description": "Four people, including a border guard, are taken out by pro-Caliphate gunmen.",
         "geo": {
-            "lat": 42.163522,
-            "lng": 45.9607152
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -741,7 +750,10 @@
         "killed": "2",
         "injured": "4",
         "description": "A 4-year-old is among two villagers shot to death by Muslim terrorists.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-12-22",
@@ -750,7 +762,10 @@
         "killed": "13",
         "injured": "3",
         "description": "Thirteen people are pulled into pieces by a Fedayeen suicide bomber.",
-        "geo": false
+        "geo": {
+            "lat": 26.3351,
+            "lng": 17.228331
+        }
     },
     {
         "date": "2013-12-22",
@@ -1084,8 +1099,8 @@
         "injured": "5",
         "description": "Two Iraqis are taken out by a Shahid suicide bomber.",
         "geo": {
-            "lat": 30.0516022,
-            "lng": 31.171086
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -1144,8 +1159,8 @@
         "injured": "8",
         "description": "Six local soldiers are machine-gunned at a terminal by Islamic extremists.",
         "geo": {
-            "lat": 34.0909899,
-            "lng": 71.1457517
+            "lat": 33.93911,
+            "lng": 67.709953
         }
     },
     {
@@ -1204,8 +1219,8 @@
         "injured": "3",
         "description": "A group of Islamists open fire on police, killing one.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -1227,7 +1242,10 @@
         "killed": "6",
         "injured": "4",
         "description": "Four very young children are among a family of Christians massacred in their own home by Fulani militants.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-12-17",
@@ -1512,7 +1530,10 @@
         "killed": "1",
         "injured": "0",
         "description": "Pro-Sharia activists kidnap and murder a tribal elder.",
-        "geo": false
+        "geo": {
+            "lat": 5.152149,
+            "lng": 46.199616
+        }
     },
     {
         "date": "2013-12-15",
@@ -1570,8 +1591,8 @@
         "injured": "3",
         "description": "A suicide bomber steps out of a car and kills a Lebanese soldier at a checkpoint.",
         "geo": {
-            "lat": 30.5460744,
-            "lng": 31.2631697
+            "lat": 32.5,
+            "lng": 21.2833333
         }
     },
     {
@@ -1594,8 +1615,8 @@
         "injured": "0",
         "description": "Islamists attack a Christian village, slaughtering four inhabitants and burning on-hundred homes.",
         "geo": {
-            "lat": 6.2938978,
-            "lng": 5.650549
+            "lat": 9.081999,
+            "lng": 8.675277
         }
     },
     {
@@ -1689,7 +1710,10 @@
         "killed": "3",
         "injured": "0",
         "description": "Three secular Sunnis are kidnapped and executed by the Islamic Front.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-12-13",
@@ -1723,8 +1747,8 @@
         "injured": "18",
         "description": "A half-dozen people lose their lives to a Mujahid car bomb.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -1794,7 +1818,10 @@
         "killed": "18",
         "injured": "6",
         "description": "Eighteen oil workers are massacred by Islamic militants at a pipeline.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-12-12",
@@ -1839,7 +1866,10 @@
         "killed": "4",
         "injured": "0",
         "description": "Islamists butcher four villagers who came to negotiate with them, cutting off ears and noses.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-12-12",
@@ -1909,8 +1939,8 @@
         "injured": "11",
         "description": "A father and son murdered by al-Qaeda are among seventeen Iraqis taken out in various attacks.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -1945,8 +1975,8 @@
         "injured": "17",
         "description": "Four local cops are taken out by a roadside bomb.",
         "geo": {
-            "lat": 12.9276082,
-            "lng": 100.8770813
+            "lat": 17.7709641,
+            "lng": 104.3151926
         }
     },
     {
@@ -2125,8 +2155,8 @@
         "injured": "0",
         "description": "A security official is picked off by suspected Hizb Ut-Tahrir.",
         "geo": {
-            "lat": 43.2562013,
-            "lng": 46.5893353
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -2137,8 +2167,8 @@
         "injured": "1",
         "description": "A Taliban bomb produces three dead children.",
         "geo": {
-            "lat": 35.6707473,
-            "lng": 66.0463534
+            "lat": 34.6880556,
+            "lng": 67.8527778
         }
     },
     {
@@ -2160,7 +2190,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A tribal elder is kidnapped and murdered by al-Shabaab militants.",
-        "geo": false
+        "geo": {
+            "lat": 5.152149,
+            "lng": 46.199616
+        }
     },
     {
         "date": "2013-12-08",
@@ -2589,7 +2622,10 @@
         "killed": "1",
         "injured": "0",
         "description": "Hamas is accused of beating a man in front of his wife, kidnapping him and then torturing him to death.",
-        "geo": false
+        "geo": {
+            "lat": 31.5016951,
+            "lng": 34.4668445
+        }
     },
     {
         "date": "2013-12-03",
@@ -2742,7 +2778,10 @@
         "killed": "6",
         "injured": "0",
         "description": "Children are among a family of six massacred in their home by Islamists.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-12-02",
@@ -3243,7 +3282,10 @@
         "killed": "1",
         "injured": "9",
         "description": "A security guard is taken out by a Shahid suicide bomber.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-11-27",
@@ -3253,8 +3295,8 @@
         "injured": "0",
         "description": "A cab driver and two teachers are murdered by suspected Mujahideen.",
         "geo": {
-            "lat": 35.5577778,
-            "lng": 42.6891667
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -3420,7 +3462,10 @@
         "killed": "15",
         "injured": "30",
         "description": "A Shahid suicide bomber detonates a bus stop, taking fifteen souls with him.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-11-26",
@@ -3490,8 +3535,8 @@
         "injured": "1",
         "description": "Islamists are suspected of spraying machine-gun fire into a vehicle.",
         "geo": {
-            "lat": 43.2562013,
-            "lng": 46.5893353
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -3610,8 +3655,8 @@
         "injured": "5",
         "description": "A shrapnel bomb ends the lives of two security personnel.",
         "geo": {
-            "lat": 30.4572371,
-            "lng": 70.9661563
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -3657,7 +3702,10 @@
         "killed": "2",
         "injured": "0",
         "description": "Conservative locals shoot a young couple to death for eloping without permission.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-11-22",
@@ -3835,8 +3883,8 @@
         "injured": "0",
         "description": "Ansar Beit al-Maqdis gunmen murder a local cop.",
         "geo": {
-            "lat": 30.3292368,
-            "lng": 31.2168466
+            "lat": 27.7527799,
+            "lng": 30.8310971
         }
     },
     {
@@ -3858,7 +3906,10 @@
         "killed": "12",
         "injured": "12",
         "description": "Gunmen shoot up a small village while shouting praises to Allah, killing a dozen.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-11-21",
@@ -4204,8 +4255,8 @@
         "injured": "0",
         "description": "A truck driver is murdered by the Taliban.",
         "geo": {
-            "lat": 27.3799987,
-            "lng": 67.915103
+            "lat": 33.2550003,
+            "lng": 73.1452867
         }
     },
     {
@@ -4324,8 +4375,8 @@
         "injured": "0",
         "description": "A 6-year-old girl is raped an murdered in what appears to be a targeted attack on Buddhists.",
         "geo": {
-            "lat": 20.2107909,
-            "lng": 93.1302932
+            "lat": 21.916221,
+            "lng": 95.955974
         }
     },
     {
@@ -4360,8 +4411,8 @@
         "injured": "2",
         "description": "A group of Muslims armed with axes and knives attack a local police station and hack two people to death.",
         "geo": {
-            "lat": 36.917399,
-            "lng": 31.104447
+            "lat": 35.86166,
+            "lng": 104.195397
         }
     },
     {
@@ -4480,8 +4531,8 @@
         "injured": "0",
         "description": "A conservative Muslim punishes his daughter for 'amoral' behavior by killing her.",
         "geo": {
-            "lat": 43.3168796,
-            "lng": 45.6814856
+            "lat": 43.4023301,
+            "lng": 45.7187468
         }
     },
     {
@@ -4515,7 +4566,10 @@
         "killed": "26",
         "injured": "41",
         "description": "Islamists spray automatic weapons fire into a village, taking out two dozen innocents.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-11-14",
@@ -4668,7 +4722,10 @@
         "killed": "1",
         "injured": "0",
         "description": "Islamic extremists murder a Protestant missionary and set several churches ablaze.",
-        "geo": false
+        "geo": {
+            "lat": 7.369722,
+            "lng": 12.354722
+        }
     },
     {
         "date": "2013-11-12",
@@ -4786,8 +4843,8 @@
         "injured": "6",
         "description": "Six children are killed when Islamic 'rebels' fire a rocket into a Christian neighborhood.",
         "geo": {
-            "lat": 33.8938961,
-            "lng": 35.5046602
+            "lat": 34.802075,
+            "lng": 38.996815
         }
     },
     {
@@ -4822,8 +4879,8 @@
         "injured": "0",
         "description": "Terrorists fire into a rival mosque, killing two worshippers.",
         "geo": {
-            "lat": 22.533754,
-            "lng": 88.371789
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -4882,8 +4939,8 @@
         "injured": "2",
         "description": "A Jewish mother and daughter are burned by a Palestinian firebomb attack.",
         "geo": {
-            "lat": 31.639093,
-            "lng": 35.21249
+            "lat": 31.652785,
+            "lng": 35.227517
         }
     },
     {
@@ -5073,7 +5130,10 @@
         "killed": "1",
         "injured": "2",
         "description": "Religion of Peace proponents hack a young man to death at a church service.",
-        "geo": false
+        "geo": {
+            "lat": -6.369028,
+            "lng": 34.888822
+        }
     },
     {
         "date": "2013-11-05",
@@ -5154,7 +5214,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A British soldier is killed by a suicide bomber.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-11-05",
@@ -5187,7 +5250,10 @@
         "killed": "4",
         "injured": "2",
         "description": "Two young boys, ages 2 and 4, are among a family of Christians massacred in their home by militant Muslims.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-11-04",
@@ -5220,7 +5286,10 @@
         "killed": "6",
         "injured": "37",
         "description": "Three children are among six Shiites disassembled by a Sunni car bomb blast.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-11-04",
@@ -5242,8 +5311,8 @@
         "injured": "0",
         "description": "The assassination of a judge is thought to be the work of Islamic militants.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -5290,8 +5359,8 @@
         "injured": "40",
         "description": "Three children and a woman are among six villagers exterminated by a Fedayeen suicide bomber.",
         "geo": {
-            "lat": 33.8938961,
-            "lng": 35.5046602
+            "lat": 34.802075,
+            "lng": 38.996815
         }
     },
     {
@@ -5338,8 +5407,8 @@
         "injured": "12",
         "description": "Three more people are killed when Sunnis and Shia clash.",
         "geo": {
-            "lat": 15.3694451,
-            "lng": 44.1910066
+            "lat": 16.9509413,
+            "lng": 43.7477743
         }
     },
     {
@@ -5470,8 +5539,8 @@
         "injured": "0",
         "description": "Thirteen villagers are cut down by Boko Haram.",
         "geo": {
-            "lat": 8.150414,
-            "lng": 4.7100905
+            "lat": 9.081999,
+            "lng": 8.675277
         }
     },
     {
@@ -5482,8 +5551,8 @@
         "injured": "50",
         "description": "Eighteen people are killed when Shiite extremists attack Sunnis.",
         "geo": {
-            "lat": 15.3694451,
-            "lng": 44.1910066
+            "lat": 16.9509413,
+            "lng": 43.7477743
         }
     },
     {
@@ -5626,8 +5695,8 @@
         "injured": "3",
         "description": "Shiites fire a rocket into a Sunni mosque, killing ten worshippers.",
         "geo": {
-            "lat": 15.3694451,
-            "lng": 44.1910066
+            "lat": 16.9509413,
+            "lng": 43.7477743
         }
     },
     {
@@ -5674,8 +5743,8 @@
         "injured": "15",
         "description": "Two people are killed and fifteen more hospitalized when fundamentalists bomb a liquor store.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -5866,8 +5935,8 @@
         "injured": "0",
         "description": "A prostitute is killed by a devout Muslim for working too close to his mosque.",
         "geo": {
-            "lat": 51.7343313,
-            "lng": 0.4690888
+            "lat": 52.3555177,
+            "lng": -1.1743197
         }
     },
     {
@@ -6346,8 +6415,8 @@
         "injured": "0",
         "description": "A man dies from injuries suffered in a brutal bombing by those fighting for an Islamic state.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -6465,7 +6534,10 @@
         "killed": "1",
         "injured": "0",
         "description": "Islamists shoot a local soldier through the head.",
-        "geo": false
+        "geo": {
+            "lat": 26.820553,
+            "lng": 30.802498
+        }
     },
     {
         "date": "2013-10-23",
@@ -6558,7 +6630,10 @@
         "killed": "7",
         "injured": "9",
         "description": "A young girl is among seven murdered in a series of Jihad attack, including a suicide bombing.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-10-22",
@@ -6592,8 +6667,8 @@
         "injured": "5",
         "description": "Two Egyptians are incinerated by Islamic bombers.",
         "geo": {
-            "lat": 29.5,
-            "lng": 33.833333
+            "lat": 26.820553,
+            "lng": 30.802498
         }
     },
     {
@@ -6711,7 +6786,10 @@
         "killed": "19",
         "injured": "0",
         "description": "Boko Haram members block traffic along a highway, then shoot and hack nineteen motorists to death.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-10-20",
@@ -6732,7 +6810,10 @@
         "killed": "5",
         "injured": "13",
         "description": "A series of bombings and shootings by Muslim 'insurgents' leaves five dead villagers.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-10-20",
@@ -6765,7 +6846,10 @@
         "killed": "1",
         "injured": "0",
         "description": "An imam is gunned down at his mosque by Religion of Peace rivals.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-10-20",
@@ -6871,8 +6955,8 @@
         "injured": "0",
         "description": "A policeman is shot to death by an Islamic extremist.",
         "geo": {
-            "lat": 43.2562013,
-            "lng": 46.5893353
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -7063,8 +7147,8 @@
         "injured": "3",
         "description": "Jihadi bombers pick off two members of the same family.",
         "geo": {
-            "lat": 33.9272709,
-            "lng": 44.7732994
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -7171,8 +7255,8 @@
         "injured": "4",
         "description": "Two guards at a checkpoint are cut down by an al-Qaeda drive-by.",
         "geo": {
-            "lat": 13.1489588,
-            "lng": 44.8505495
+            "lat": 13.0578415,
+            "lng": 44.8832833
         }
     },
     {
@@ -7375,8 +7459,8 @@
         "injured": "0",
         "description": "A Muslim burns his 'too Westernized' wife to death after asserting that Islam teaches a man's superiority over women.",
         "geo": {
-            "lat": 56.1165227,
-            "lng": -3.9369029
+            "lat": 56.4906712,
+            "lng": -4.2026458
         }
     },
     {
@@ -7387,8 +7471,8 @@
         "injured": "4",
         "description": "A suicide bomber at a market and a separate shooting leave at least one dead victim.",
         "geo": {
-            "lat": 13.1489588,
-            "lng": 44.8505495
+            "lat": 13.0578415,
+            "lng": 44.8832833
         }
     },
     {
@@ -7435,8 +7519,8 @@
         "injured": "3",
         "description": "Four people are killed by a Shahid suicide bomber.",
         "geo": {
-            "lat": 30.088496,
-            "lng": 31.2461258
+            "lat": 26.1644681,
+            "lng": 32.7323895
         }
     },
     {
@@ -7578,7 +7662,10 @@
         "killed": "9",
         "injured": "16",
         "description": "Nine people are killed in a series of attacks including a car bomb at a restaurant in a Shiite neighborhood.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-10-08",
@@ -7587,7 +7674,10 @@
         "killed": "40",
         "injured": "50",
         "description": "Forty civilians are reported killed by Seleka rebels.",
-        "geo": false
+        "geo": {
+            "lat": 6.611111,
+            "lng": 20.939444
+        }
     },
     {
         "date": "2013-10-07",
@@ -7692,7 +7782,10 @@
         "killed": "6",
         "injured": "21",
         "description": "Two car bombs in a Shiite neighborhood leave six dead.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-10-07",
@@ -8073,7 +8166,10 @@
         "killed": "17",
         "injured": "22",
         "description": "A Tehrik-i-Taliban suicide bomber murders seventeen people, including a woman and child.",
-        "geo": false
+        "geo": {
+            "lat": 33.5134997,
+            "lng": 73.3347624
+        }
     },
     {
         "date": "2013-10-03",
@@ -8095,8 +8191,8 @@
         "injured": "2",
         "description": "Four local soldiers are sent to Allah by Taliban bombers.",
         "geo": {
-            "lat": 33.8183376,
-            "lng": 66.2917573
+            "lat": 32.0202219,
+            "lng": 65.91153
         }
     },
     {
@@ -8203,8 +8299,8 @@
         "injured": "0",
         "description": "Two off-duty cops are gunned down by suspected Islamists.",
         "geo": {
-            "lat": 43.2562013,
-            "lng": 46.5893353
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -8371,8 +8467,8 @@
         "injured": "0",
         "description": "A local is shot to death in his car by al-Qaeda.",
         "geo": {
-            "lat": 13.5872484,
-            "lng": 44.0351399
+            "lat": 13.5746978,
+            "lng": 44.0103922
         }
     },
     {
@@ -8419,8 +8515,8 @@
         "injured": "50",
         "description": "Forty people at a Shiite funeral join their beloved courtesy of a Sunni suicide bomber.",
         "geo": {
-            "lat": 32.7648763,
-            "lng": 44.2810588
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -8526,7 +8622,10 @@
         "killed": "15",
         "injured": "12",
         "description": "Muslim militia attack a Christian village, hacking to death fifteen residents and burning down their homes.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-09-27",
@@ -8739,7 +8838,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A homosexual is executed by Islamic fundamentalists.",
-        "geo": false
+        "geo": {
+            "lat": 15.552727,
+            "lng": 48.516388
+        }
     },
     {
         "date": "2013-09-25",
@@ -8821,8 +8923,8 @@
         "injured": "0",
         "description": "A judge and his son are shot to death in their car by suspected Islamists.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -8977,8 +9079,8 @@
         "injured": "16",
         "description": "Two others are killed by a Fedayeen suicide car bomber at a police station.",
         "geo": {
-            "lat": 41.9412229,
-            "lng": 48.0408334
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -9024,7 +9126,10 @@
         "killed": "3",
         "injured": "30",
         "description": "Islamist rebels kill three people and abduct thirty others.",
-        "geo": false
+        "geo": {
+            "lat": -4.038333,
+            "lng": 21.758664
+        }
     },
     {
         "date": "2013-09-22",
@@ -9165,7 +9270,10 @@
         "killed": "2",
         "injured": "6",
         "description": "Two businessmen are killed when Muslim militants toss a grenade into a building.",
-        "geo": false
+        "geo": {
+            "lat": 5.152149,
+            "lng": 46.199616
+        }
     },
     {
         "date": "2013-09-21",
@@ -9210,7 +9318,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A 33-year-old woman is strangled by her family after having being accused of 'violating Allah's law'.",
-        "geo": false
+        "geo": {
+            "lat": 31.5016951,
+            "lng": 34.4668445
+        }
     },
     {
         "date": "2013-09-20",
@@ -9375,7 +9486,10 @@
         "killed": "19",
         "injured": "4",
         "description": "Sunni terrorists are suspected of a bus bombing that leaves nineteen dead.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-09-19",
@@ -9505,8 +9619,8 @@
         "injured": "0",
         "description": "Three children, ages 2 to 9, are butchered along with their parents during an al-Qaeda home invasion.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -9589,8 +9703,8 @@
         "injured": "6",
         "description": "Suicide bombers take out three policemen at their station.",
         "geo": {
-            "lat": 43.3155928,
-            "lng": 45.16252
+            "lat": 43.4023301,
+            "lng": 45.7187468
         }
     },
     {
@@ -9757,8 +9871,8 @@
         "injured": "0",
         "description": "A moderate activist is murdered outside his home by suspected pro-Sharia radicals.",
         "geo": {
-            "lat": 43.8451098,
-            "lng": 46.7016441
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -10141,8 +10255,8 @@
         "injured": "0",
         "description": "An 'Australian' suicide bomber kills three dozen soldiers guarding an airport.",
         "geo": {
-            "lat": 35.3296518,
-            "lng": 40.1350341
+            "lat": 35.3251328,
+            "lng": 40.1375141
         }
     },
     {
@@ -10152,7 +10266,10 @@
         "killed": "30",
         "injured": "0",
         "description": "Women and children are among thirty villagers massacred by al-Nusra over their status as religious minorities at the urging of a cleric.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-09-10",
@@ -10438,8 +10555,8 @@
         "injured": "0",
         "description": "One person is left dead following an Islamist car bombing.",
         "geo": {
-            "lat": 42.0674251,
-            "lng": 48.2890907
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -10461,7 +10578,10 @@
         "killed": "18",
         "injured": "31",
         "description": "Eighteen people are pulled into pieces by a suicide bomber outside a restaurant.",
-        "geo": false
+        "geo": {
+            "lat": 5.152149,
+            "lng": 46.199616
+        }
     },
     {
         "date": "2013-09-06",
@@ -10627,8 +10747,8 @@
         "injured": "4",
         "description": "Three Iraqis are machine-gunned at point-blank range by al-Qaeda.",
         "geo": {
-            "lat": 35.0180032,
-            "lng": 43.4452148
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -10722,7 +10842,10 @@
         "killed": "3",
         "injured": "1",
         "description": "Muslims gun down a devout Christian villager and his two teenage sons.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-09-03",
@@ -10731,7 +10854,10 @@
         "killed": "6",
         "injured": "0",
         "description": "A brutal assault by Muslim militia on the home of a Christian family leaves six members dead, including a 7-year-old child.",
-        "geo": false
+        "geo": {
+            "lat": 8.4003281,
+            "lng": 7.2154034
+        }
     },
     {
         "date": "2013-09-03",
@@ -10764,7 +10890,10 @@
         "killed": "5",
         "injured": "0",
         "description": "Three children and their parents are brutally slain in their own home by Muslim terrorists.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-09-03",
@@ -10798,8 +10927,8 @@
         "injured": "0",
         "description": "Three police officers are killed by suspected Islamic militia.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -10929,7 +11058,10 @@
         "killed": "5",
         "injured": "6",
         "description": "Five patrons are blown apart by Mujahid bombers at a restaurant.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-09-03",
@@ -10987,8 +11119,8 @@
         "injured": "0",
         "description": "The Taliban kidnap seven Afghans from their family homes, chain them together and then brutally execute them.",
         "geo": {
-            "lat": 33.65,
-            "lng": 62.933333
+            "lat": 33.316667,
+            "lng": 68.45
         }
     },
     {
@@ -11034,7 +11166,10 @@
         "killed": "52",
         "injured": "0",
         "description": "Shia militia enter a refugee camp, sort out fifty-two unarmed dissidents and summarily execute them.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-08-31",
@@ -11068,8 +11203,8 @@
         "injured": "0",
         "description": "An off-duty officer is gunned down by al-Qaeda assassins.",
         "geo": {
-            "lat": 13.1489588,
-            "lng": 44.8505495
+            "lat": 13.0578415,
+            "lng": 44.8832833
         }
     },
     {
@@ -11104,8 +11239,8 @@
         "injured": "3",
         "description": "Mujahideen use an IED to kill three little girls.",
         "geo": {
-            "lat": 33.8347622,
-            "lng": 44.2526397
+            "lat": 36.8848467,
+            "lng": 42.9281022
         }
     },
     {
@@ -11163,7 +11298,10 @@
         "killed": "8",
         "injured": "16",
         "description": "A Shahid suicide bomber slips into a funeral and murders eight mourners.",
-        "geo": false
+        "geo": {
+            "lat": 36.9328902,
+            "lng": 69.3354317
+        }
     },
     {
         "date": "2013-08-30",
@@ -11268,7 +11406,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A gay man is shot to death by Islamic fundamentalists at a market.",
-        "geo": false
+        "geo": {
+            "lat": 15.552727,
+            "lng": 48.516388
+        }
     },
     {
         "date": "2013-08-29",
@@ -11398,8 +11539,8 @@
         "injured": "5",
         "description": "Four Iraqi soldiers are slain by al-Qaeda bombers.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -11493,7 +11634,10 @@
         "killed": "0",
         "injured": "30",
         "description": "Islamic fundamentalists attack a brothel and beat thirty up prostitutes.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-08-27",
@@ -11623,8 +11767,8 @@
         "injured": "30",
         "description": "Jihadis set off a bomb at a soccer field, killing seven people.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -12391,8 +12535,8 @@
         "injured": "24",
         "description": "Fifteen Christian villagers are reportedly massacred by Sunni terrorists.",
         "geo": {
-            "lat": 34.65,
-            "lng": 38.2333333
+            "lat": 34.802075,
+            "lng": 38.996815
         }
     },
     {
@@ -12547,8 +12691,8 @@
         "injured": "7",
         "description": "Mujahideen kill two people with a bomb hidden on a minibus.",
         "geo": {
-            "lat": 33.7027463,
-            "lng": 44.6724469
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -12835,8 +12979,8 @@
         "injured": "0",
         "description": "Fifteen cops are killed and mutilated when Brotherhood supporters storm a police station.",
         "geo": {
-            "lat": 30.045374,
-            "lng": 31.2476668
+            "lat": 30.0138972,
+            "lng": 31.26059
         }
     },
     {
@@ -13002,7 +13146,10 @@
         "killed": "12",
         "injured": "0",
         "description": "At least a dozen villagers are massacred by Boko Haram Islamists.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-08-11",
@@ -13144,8 +13291,8 @@
         "injured": "3",
         "description": "Fundamentalists detonate a bomb at a video arcade, killing an 8-year-old boy.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -13240,8 +13387,8 @@
         "injured": "2",
         "description": "Two people are cut down by al-Qaeda gunmen.",
         "geo": {
-            "lat": 35.0180032,
-            "lng": 43.4452148
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -13264,8 +13411,8 @@
         "injured": "0",
         "description": "Islamists shoot a police officer to death in his car.",
         "geo": {
-            "lat": 43.2562013,
-            "lng": 46.5893353
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -13312,8 +13459,8 @@
         "injured": "16",
         "description": "Fundamentalists set off bombs and attack stores selling alcohol during Ramadan.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -13515,7 +13662,10 @@
         "killed": "10",
         "injured": "15",
         "description": "Ten villagers are ripped apart by an al-Qaeda shrapnel bomb.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-08-06",
@@ -13824,7 +13974,10 @@
         "killed": "19",
         "injured": "2",
         "description": "At least nineteen policemen are killed in two Boko Haram attacks.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-08-04",
@@ -13858,8 +14011,8 @@
         "injured": "0",
         "description": "Eight women and two children are among eighteen family members slaughtered by Islamists.",
         "geo": {
-            "lat": 33.5101372,
-            "lng": 36.2980254
+            "lat": 34.802075,
+            "lng": 38.996815
         }
     },
     {
@@ -13869,7 +14022,10 @@
         "killed": "25",
         "injured": "0",
         "description": "Twenty-five residents, including women and children, are murdered by al-Nusra.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-08-04",
@@ -13878,7 +14034,10 @@
         "killed": "18",
         "injured": "0",
         "description": "Eighteen innocent civilians are shot or stabbed to death for being Alawite.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-08-04",
@@ -13899,7 +14058,10 @@
         "killed": "12",
         "injured": "0",
         "description": "A dozen people, mostly members of the same family are shot in their own homes by devout Sunnis.",
-        "geo": false
+        "geo": {
+            "lat": 35.1272787,
+            "lng": 36.7704198
+        }
     },
     {
         "date": "2013-08-04",
@@ -13932,7 +14094,10 @@
         "killed": "15",
         "injured": "1",
         "description": "Fifteen members of the same Alawite family are machine-gunned by al-Nusra.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-08-04",
@@ -14062,8 +14227,8 @@
         "injured": "0",
         "description": "Islamists gun down a rival cleric as he is getting out of his car.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -14110,8 +14275,8 @@
         "injured": "0",
         "description": "An al-Qaeda bomb produces four dead Iraqis.",
         "geo": {
-            "lat": 36.781268,
-            "lng": 45.7346624
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -14505,7 +14670,10 @@
         "killed": "4",
         "injured": "14",
         "description": "al-Qaeda bombers take out four people at a commercial district.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-07-29",
@@ -14515,8 +14683,8 @@
         "injured": "9",
         "description": "A Sunni landmine along a road traveled by Shiites leaves three dead.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -14778,7 +14946,10 @@
         "killed": "20",
         "injured": "12",
         "description": "Boko Haram Islamists open fire on a village, killing twenty fishermen and traders.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-07-27",
@@ -14812,8 +14983,8 @@
         "injured": "7",
         "description": "Seven people are sent to Allah by a Shahid suicide bomber.",
         "geo": {
-            "lat": 33.1911812,
-            "lng": 68.089484
+            "lat": 33.1762366,
+            "lng": 68.0954459
         }
     },
     {
@@ -15016,8 +15187,8 @@
         "injured": "4",
         "description": "Hamas-backed gunmen exterminate two Egyptian security guards.",
         "geo": {
-            "lat": 29.5,
-            "lng": 33.833333
+            "lat": 26.820553,
+            "lng": 30.802498
         }
     },
     {
@@ -15052,8 +15223,8 @@
         "injured": "18",
         "description": "al-Qaeda bombers dismantle eight patrons at a popular coffee shop.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -15112,8 +15283,8 @@
         "injured": "1",
         "description": "A rabbi is shot at close range by dedicated Islamists.",
         "geo": {
-            "lat": 42.0674251,
-            "lng": 48.2890907
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -15160,8 +15331,8 @@
         "injured": "2",
         "description": "Nine Iraqi policemen are brutally machine-gunned at their post by Sunni Islamists.",
         "geo": {
-            "lat": 36.781268,
-            "lng": 45.7346624
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -15184,8 +15355,8 @@
         "injured": "0",
         "description": "Fourteen Shiite truck drivers are summarily executed by Sunnis who first verified their religious status.",
         "geo": {
-            "lat": 30.0660721,
-            "lng": 31.2306187
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -15520,8 +15691,8 @@
         "injured": "0",
         "description": "Fifty captured soldiers are executed in cold blood by al-Nusra.",
         "geo": {
-            "lat": 30.7819446,
-            "lng": 31.0199692
+            "lat": 34.802075,
+            "lng": 38.996815
         }
     },
     {
@@ -15556,8 +15727,8 @@
         "injured": "11",
         "description": "Five people are killed during a series of terror attacks by Hamas-backed militants.",
         "geo": {
-            "lat": 29.5,
-            "lng": 33.833333
+            "lat": 26.820553,
+            "lng": 30.802498
         }
     },
     {
@@ -15579,7 +15750,10 @@
         "killed": "2",
         "injured": "4",
         "description": "Islamic terrorists blow up a family home, killing two.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-07-21",
@@ -15708,7 +15882,10 @@
         "killed": "8",
         "injured": "29",
         "description": "Eight people in a Shiite neighborhood are exterminated by Sunni bombers.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-07-20",
@@ -15717,7 +15894,10 @@
         "killed": "6",
         "injured": "15",
         "description": "al-Qaeda bombers send six Iraqis to Allah.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-07-20",
@@ -15858,7 +16038,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A man is shot to death by al-Qaeda.",
-        "geo": false
+        "geo": {
+            "lat": 15.552727,
+            "lng": 48.516388
+        }
     },
     {
         "date": "2013-07-19",
@@ -15951,7 +16134,10 @@
         "killed": "0",
         "injured": "1",
         "description": "A gay man survives a targeted shooting by fundamentalists with injuries.",
-        "geo": false
+        "geo": {
+            "lat": 15.552727,
+            "lng": 48.516388
+        }
     },
     {
         "date": "2013-07-19",
@@ -15997,8 +16183,8 @@
         "injured": "43",
         "description": "Angry Muslims riot over an alleged desecration of the Quran.",
         "geo": {
-            "lat": 28.3858651,
-            "lng": 77.8899933
+            "lat": 22.288214,
+            "lng": 70.807468
         }
     },
     {
@@ -16104,7 +16290,10 @@
         "killed": "3",
         "injured": "0",
         "description": "Three young men are tragically cut down by Islamist bombers.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-07-18",
@@ -16150,8 +16339,8 @@
         "injured": "2",
         "description": "Islamic hardliners blow up a van carrying local tribesmen, killing at least three.",
         "geo": {
-            "lat": 33.4365098,
-            "lng": 74.4012635
+            "lat": 28.9083333,
+            "lng": 71.55
         }
     },
     {
@@ -16186,8 +16375,8 @@
         "injured": "4",
         "description": "Two Shiites are shot to death by Sunnis over a dispute concerning a mosque.",
         "geo": {
-            "lat": 15.3694451,
-            "lng": 44.1910066
+            "lat": 16.9509413,
+            "lng": 43.7477743
         }
     },
     {
@@ -16594,8 +16783,8 @@
         "injured": "0",
         "description": "Islamists four cops sitting in their car.",
         "geo": {
-            "lat": 42.0327414,
-            "lng": 47.0638703
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -16606,8 +16795,8 @@
         "injured": "7",
         "description": "Fundamentalists murder two young people for playing a game during Ramadan.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -16714,8 +16903,8 @@
         "injured": "1",
         "description": "Islamic militants fire a rocket into a checkpoint, killing a policeman.",
         "geo": {
-            "lat": 29.5,
-            "lng": 33.833333
+            "lat": 26.820553,
+            "lng": 30.802498
         }
     },
     {
@@ -17121,7 +17310,10 @@
         "killed": "1",
         "injured": "3",
         "description": "Pakistani-backed Mujahideen kill one person with an IED.",
-        "geo": false
+        "geo": {
+            "lat": 20.593684,
+            "lng": 78.96288
+        }
     },
     {
         "date": "2013-07-08",
@@ -17383,8 +17575,8 @@
         "injured": "1",
         "description": "Islamic militia fire automatic weapons at a group of policemen, killing one.",
         "geo": {
-            "lat": 43.2058896,
-            "lng": 46.8669631
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -17394,7 +17586,10 @@
         "killed": "4",
         "injured": "10",
         "description": "A Fedayeen suicide bomber murders four other people.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-07-05",
@@ -17499,7 +17694,10 @@
         "killed": "5",
         "injured": "3",
         "description": "Five local soldiers at a check post lose their lives to a Shahid suicide car bomber.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-07-04",
@@ -17508,7 +17706,10 @@
         "killed": "2",
         "injured": "0",
         "description": "Muslim 'insurgents' gun down a female doctor and a school guard.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-07-04",
@@ -17601,7 +17802,10 @@
         "killed": "2",
         "injured": "0",
         "description": "Two boys, ages 10 and 12, are torn to shreds by Islamic bombers.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-07-03",
@@ -17634,7 +17838,10 @@
         "killed": "2",
         "injured": "5",
         "description": "Two Iraqis are taken out by an al-Qaeda bomb blast.",
-        "geo": false
+        "geo": {
+            "lat": 33.6491897,
+            "lng": 44.2666031
+        }
     },
     {
         "date": "2013-07-02",
@@ -17871,7 +18078,10 @@
         "killed": "8",
         "injured": "0",
         "description": "Eight men are pulled out of their homes and executed by al-Qaeda.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-07-01",
@@ -17893,8 +18103,8 @@
         "injured": "0",
         "description": "A Hindu leader is murdered by Muslim radicals.",
         "geo": {
-            "lat": 9.9252007,
-            "lng": 78.1197754
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -18025,8 +18235,8 @@
         "injured": "5",
         "description": "Three Iraqis are taken out by a Shahid suicide bomber.",
         "geo": {
-            "lat": 35.7980836,
-            "lng": 43.2932393
+            "lat": 35.7817051,
+            "lng": 43.2504884
         }
     },
     {
@@ -18073,8 +18283,8 @@
         "injured": "14",
         "description": "Islamic militia kill a local police officer and injure fourteen others.",
         "geo": {
-            "lat": 42.8706519,
-            "lng": 45.6906525
+            "lat": 43.4023301,
+            "lng": 45.7187468
         }
     },
     {
@@ -18085,8 +18295,8 @@
         "injured": "0",
         "description": "Islamists shoot a local cop six times in the head.",
         "geo": {
-            "lat": 29.5,
-            "lng": 33.833333
+            "lat": 26.820553,
+            "lng": 30.802498
         }
     },
     {
@@ -18096,7 +18306,10 @@
         "killed": "10",
         "injured": "0",
         "description": "Ten traders on a business trip are massacred by Sharia proponents.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-06-29",
@@ -18189,7 +18402,10 @@
         "killed": "11",
         "injured": "19",
         "description": "al-Qaeda bombers take out eleven Iraqis.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-06-28",
@@ -18271,8 +18487,8 @@
         "injured": "12",
         "description": "Religion of Peace bombers target an auto show, taking out seven patrons.",
         "geo": {
-            "lat": 32.7648763,
-            "lng": 44.2810588
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -18283,8 +18499,8 @@
         "injured": "6",
         "description": "A 3-year-old girl is disassembled by an al-Qaeda bomb planted at her home.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -18475,8 +18691,8 @@
         "injured": "0",
         "description": "Three family members are obliterated by an Islamist bomb.",
         "geo": {
-            "lat": 32.8009383,
-            "lng": 70.508644
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -18510,7 +18726,10 @@
         "killed": "24",
         "injured": "21",
         "description": "At least two-dozen people are stabbed or beaten to death by rioting Muslim extremists.",
-        "geo": false
+        "geo": {
+            "lat": 35.86166,
+            "lng": 104.195397
+        }
     },
     {
         "date": "2013-06-25",
@@ -18808,8 +19027,8 @@
         "injured": "0",
         "description": "A milk vendor is murdered in cold blood by Religion of Peace emissaries.",
         "geo": {
-            "lat": 9.9252007,
-            "lng": 78.1197754
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -18892,8 +19111,8 @@
         "injured": "0",
         "description": "Religious extremists shoot ten foreign tourists and one guard to death at a mountain climbing camp.",
         "geo": {
-            "lat": 35.2375038,
-            "lng": 74.5891446
+            "lat": 35.3647834,
+            "lng": 74.580726
         }
     },
     {
@@ -19036,8 +19255,8 @@
         "injured": "32",
         "description": "A Shahid suicide bomber walks into a Shia mosque and sends fourteen worshippers straight to Allah.",
         "geo": {
-            "lat": 30.0516684,
-            "lng": 31.26697
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -19144,8 +19363,8 @@
         "injured": "11",
         "description": "A Fedayeen suicide bomber takes out two civilians.",
         "geo": {
-            "lat": 15.3694451,
-            "lng": 44.1910066
+            "lat": 16.9509413,
+            "lng": 43.7477743
         }
     },
     {
@@ -19191,7 +19410,10 @@
         "killed": "13",
         "injured": "0",
         "description": "Thirteen fishermen and tea vendor's are gunned down in cold blood by Islamic extremists.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-06-18",
@@ -19260,7 +19482,10 @@
         "killed": "1",
         "injured": "0",
         "description": "At least one resident is killed when Muslim terrorists attack a Christian village and burn four churches.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-06-17",
@@ -19281,7 +19506,10 @@
         "killed": "3",
         "injured": "1",
         "description": "al-Qaeda gunmen walk into a restaurant and gun down three patrons.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-06-17",
@@ -19399,8 +19627,8 @@
         "injured": "10",
         "description": "Mujahideen car bombers send five Iraqis to Allah.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -19422,7 +19650,10 @@
         "killed": "4",
         "injured": "0",
         "description": "Four Shiites are machine-gunned by Sunnis .",
-        "geo": false
+        "geo": {
+            "lat": 33.854721,
+            "lng": 35.862285
+        }
     },
     {
         "date": "2013-06-16",
@@ -19503,7 +19734,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A pastor's throat is slit by Islamists upon refusal to convert.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-06-15",
@@ -19740,7 +19974,10 @@
         "killed": "30",
         "injured": "0",
         "description": "At least two dozen Shia civilians are slaughtered in their homes by Sunni extremists praising Allah.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-06-11",
@@ -19773,7 +20010,10 @@
         "killed": "3",
         "injured": "38",
         "description": "Two al-Qaeda bomb blasts take out three Iraqis.",
-        "geo": false
+        "geo": {
+            "lat": 34.8809639,
+            "lng": 44.6207633
+        }
     },
     {
         "date": "2013-06-10",
@@ -19819,8 +20059,8 @@
         "injured": "10",
         "description": "Three people are torn apart by a Fedayeen suicide bomber.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -19866,7 +20106,10 @@
         "killed": "15",
         "injured": "46",
         "description": "At least fifteen people are exterminated by Mujahideen bomb blasts at a fruit and vegetable market.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-06-10",
@@ -20116,8 +20359,8 @@
         "injured": "0",
         "description": "A female polio worker loses her life in a hospital a few days after a shooting attack by fundamentalists.",
         "geo": {
-            "lat": 33.9122213,
-            "lng": 71.5549808
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -20283,7 +20526,10 @@
         "killed": "7",
         "injured": "9",
         "description": "Seven NATO soldiers are killed when a suicide truck bomber detonates inside their base.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-06-06",
@@ -20292,7 +20538,10 @@
         "killed": "0",
         "injured": "5",
         "description": "Muslim 'extremists' break in to a Catholic seminary and beat the rector and students 'with violence and brutality'.",
-        "geo": false
+        "geo": {
+            "lat": 23.684994,
+            "lng": 90.356331
+        }
     },
     {
         "date": "2013-06-05",
@@ -20409,7 +20658,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A woman is forced to recite Quran and then hacked to death with an axe after leaving the house without her husband's permission.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-06-03",
@@ -20490,7 +20742,10 @@
         "killed": "3",
         "injured": "3",
         "description": "A Jabhat al-Nusra car bomb leaves three dead.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-06-02",
@@ -20524,8 +20779,8 @@
         "injured": "0",
         "description": "Sunni terrorists murder three Syrian truck drivers.",
         "geo": {
-            "lat": 33.0363903,
-            "lng": 40.2833315
+            "lat": 32.5597614,
+            "lng": 41.9196471
         }
     },
     {
@@ -20583,7 +20838,10 @@
         "killed": "1",
         "injured": "0",
         "description": "Religious extremists gun down a public high school principal in cold blood at his home.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-06-01",
@@ -20724,7 +20982,10 @@
         "killed": "2",
         "injured": "0",
         "description": "Two Buddhists are beheaded in separate attacks.",
-        "geo": false
+        "geo": {
+            "lat": 21.916221,
+            "lng": 95.955974
+        }
     },
     {
         "date": "2013-05-31",
@@ -21201,7 +21462,10 @@
         "killed": "6",
         "injured": "12",
         "description": "Sunni bombers strike a Shiite open air market, killing at least a half dozen patrons.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-05-27",
@@ -21223,8 +21487,8 @@
         "injured": "26",
         "description": "al-Qaeda bombers take out eight Iraqis with a bomb planted in a Shia neighborhood.",
         "geo": {
-            "lat": 30.027487,
-            "lng": 31.2388919
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -21282,7 +21546,10 @@
         "killed": "3",
         "injured": "11",
         "description": "Three Iraqis are sent to Allah by al-Qaeda bombers.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-05-27",
@@ -21387,7 +21654,10 @@
         "killed": "6",
         "injured": "2",
         "description": "A teacher and a teenage boy are among six people murdered by Islamic militants.",
-        "geo": false
+        "geo": {
+            "lat": -0.023559,
+            "lng": 37.906193
+        }
     },
     {
         "date": "2013-05-26",
@@ -21408,7 +21678,10 @@
         "killed": "2",
         "injured": "0",
         "description": "A 4-year-old child and her mother bleed to death following a Taliban rocket attack on their home.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-05-26",
@@ -21574,8 +21847,8 @@
         "injured": "14",
         "description": "Children are among the casualties when a female suicide bomber detonates in a public square.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -21586,8 +21859,8 @@
         "injured": "0",
         "description": "Four civilians at a mosque are killed when explosives carried by bombers detonate prematurely after the stop off for pre-blast prayer.",
         "geo": {
-            "lat": 33.65,
-            "lng": 62.933333
+            "lat": 33.316667,
+            "lng": 68.45
         }
     },
     {
@@ -21658,8 +21931,8 @@
         "injured": "0",
         "description": "An al-Qaeda attack on a local security post leaves two soldiers dead.",
         "geo": {
-            "lat": 17.1322741,
-            "lng": 42.7788757
+            "lat": 15.552727,
+            "lng": 48.516388
         }
     },
     {
@@ -21730,8 +22003,8 @@
         "injured": "0",
         "description": "At least two innocent people are killed during a shooting and grenade attack by Islamic militants.",
         "geo": {
-            "lat": 42.707822,
-            "lng": 47.5641242
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -21874,8 +22147,8 @@
         "injured": "0",
         "description": "An off-duty soldier is hacked to death in the name of Allah by two Muslims.",
         "geo": {
-            "lat": 51.5073509,
-            "lng": -0.1277583
+            "lat": 52.3555177,
+            "lng": -1.1743197
         }
     },
     {
@@ -21886,8 +22159,8 @@
         "injured": "14",
         "description": "A suicide bomber detonates at a busy market, wiping out four bystanders.",
         "geo": {
-            "lat": 32.8061215,
-            "lng": 67.7735206
+            "lat": 35.2047234,
+            "lng": 63.0618566
         }
     },
     {
@@ -21970,8 +22243,8 @@
         "injured": "1",
         "description": "A police officer is gunned down by Islamists.",
         "geo": {
-            "lat": 42.8222753,
-            "lng": 47.1165961
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -22174,8 +22447,8 @@
         "injured": "44",
         "description": "Four people are killed when Jihadists set off a bomb in front of a courthouse.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -22341,7 +22614,10 @@
         "killed": "1",
         "injured": "5",
         "description": "A bomb targeting children leaves one dead.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-05-19",
@@ -22554,7 +22830,10 @@
         "killed": "21",
         "injured": "120",
         "description": "Twenty-one worshippers at two mosques are sent straight to Allah by Religion of Peace rivals.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-05-17",
@@ -22660,8 +22939,8 @@
         "injured": "10",
         "description": "An al-Shabaab ambush leaves five dead.",
         "geo": {
-            "lat": 3.3124667,
-            "lng": 43.4717027
+            "lat": 5.152149,
+            "lng": 46.199616
         }
     },
     {
@@ -22911,7 +23190,10 @@
         "killed": "3",
         "injured": "0",
         "description": "Mujahideen murder three men walking by the side of the road.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-05-12",
@@ -23065,8 +23347,8 @@
         "injured": "35",
         "description": "A 10-year-old boy is taken out by a bomb planted by Sunni hardliners.",
         "geo": {
-            "lat": 33.7328544,
-            "lng": 73.5402408
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -23125,8 +23407,8 @@
         "injured": "7",
         "description": "Religion of Peace rivals bomb a mosque, killing three worshippers.",
         "geo": {
-            "lat": 32.6520315,
-            "lng": 44.6254642
+            "lat": 32.690302,
+            "lng": 44.4181786
         }
     },
     {
@@ -23605,8 +23887,8 @@
         "injured": "0",
         "description": "Hezbollah is accused of butchering twenty people, mostly women and children, with knives.",
         "geo": {
-            "lat": 34.5082501,
-            "lng": 36.5823944
+            "lat": 34.802075,
+            "lng": 38.996815
         }
     },
     {
@@ -23652,7 +23934,10 @@
         "killed": "2",
         "injured": "0",
         "description": "A 95-year-old man and his grandson are murdered in their home by al-Shabaab activists.",
-        "geo": false
+        "geo": {
+            "lat": 9.9317253,
+            "lng": 45.3745358
+        }
     },
     {
         "date": "2013-05-05",
@@ -23685,7 +23970,10 @@
         "killed": "3",
         "injured": "13",
         "description": "Three patrons are killed by a Fundamentalist bomb at an Internet cafe.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-05-05",
@@ -23718,7 +24006,10 @@
         "killed": "10",
         "injured": "0",
         "description": "Islamic extremists stage a Sunday morning attack on a church and a nearby cattle market, killing at least ten.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-05-05",
@@ -24004,8 +24295,8 @@
         "injured": "0",
         "description": "Five police officers are taken down by an al-Qaeda blast.",
         "geo": {
-            "lat": 35.0180032,
-            "lng": 43.4452148
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -24076,8 +24367,8 @@
         "injured": "2",
         "description": "Two teens are killed by a bomb planted by Jihadis outside a store that refused to pay zakat.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -24136,8 +24427,8 @@
         "injured": "5",
         "description": "A Shahid suicide bomber takes two Iraqis with him.",
         "geo": {
-            "lat": 30.0551596,
-            "lng": 31.2373055
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -24172,8 +24463,8 @@
         "injured": "0",
         "description": "Religious radicals kidnap and execute three local security personnel.",
         "geo": {
-            "lat": 25.6036869,
-            "lng": 68.691887
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -24256,8 +24547,8 @@
         "injured": "0",
         "description": "Twenty Shiite adults are reportedly abducted and beheaded by Sunni militia.",
         "geo": {
-            "lat": 36.3755668,
-            "lng": 36.9917125
+            "lat": 34.802075,
+            "lng": 38.996815
         }
     },
     {
@@ -24316,8 +24607,8 @@
         "injured": "50",
         "description": "Jamaat-e-Islami attack participants at a meeting of a secular-leaning political party, killing three.",
         "geo": {
-            "lat": 24.4476749,
-            "lng": 88.0326403
+            "lat": 23.684994,
+            "lng": 90.356331
         }
     },
     {
@@ -24676,8 +24967,8 @@
         "injured": "1",
         "description": "Islamic snipers pick off three local cops.",
         "geo": {
-            "lat": 42.8222753,
-            "lng": 47.1165961
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -24807,7 +25098,10 @@
         "killed": "1",
         "injured": "0",
         "description": "A woman is executed by her father in front of 300 others after dishonoring her family by leaving her husband.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-04-22",
@@ -24853,8 +25147,8 @@
         "injured": "1",
         "description": "An al-Qaeda attack leaves two dead.",
         "geo": {
-            "lat": 15.4700312,
-            "lng": 45.3228575
+            "lat": 15.515888,
+            "lng": 45.4498065
         }
     },
     {
@@ -24936,7 +25230,10 @@
         "killed": "9",
         "injured": "0",
         "description": "Nine passengers are feared dead following an ambush on a passenger bush by Fulani militia.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-04-19",
@@ -24970,8 +25267,8 @@
         "injured": "0",
         "description": "Thirteen policemen are machine-gunned in their sleep by Sunni hardliners.",
         "geo": {
-            "lat": 33.65,
-            "lng": 62.933333
+            "lat": 33.316667,
+            "lng": 68.45
         }
     },
     {
@@ -25150,8 +25447,8 @@
         "injured": "0",
         "description": "Five Afghans are murdered by the Taliban.",
         "geo": {
-            "lat": 33.1911812,
-            "lng": 68.089484
+            "lat": 33.1762366,
+            "lng": 68.0954459
         }
     },
     {
@@ -25233,7 +25530,10 @@
         "killed": "9",
         "injured": "8",
         "description": "A Shahid suicide bomber at a checkpoint sends other nine souls to Allah.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-04-16",
@@ -25242,7 +25542,10 @@
         "killed": "8",
         "injured": "0",
         "description": "Religion of Peace bombers take down eight members of the same family.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-04-16",
@@ -25323,7 +25626,10 @@
         "killed": "4",
         "injured": "15",
         "description": "Islamic bombers destroy a market, along with four patrons.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-04-15",
@@ -25393,8 +25699,8 @@
         "injured": "13",
         "description": "Religious extremists car bomb an open air market, killing at least two.",
         "geo": {
-            "lat": 32.7648763,
-            "lng": 44.2810588
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -25404,7 +25710,10 @@
         "killed": "7",
         "injured": "4",
         "description": "Seven civilians are pulled into pieces by Taliban bombers.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-04-15",
@@ -25474,8 +25783,8 @@
         "injured": "0",
         "description": "A secular politician is assassinated by suspected Islamists.",
         "geo": {
-            "lat": 35.0180032,
-            "lng": 43.4452148
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -25486,8 +25795,8 @@
         "injured": "14",
         "description": "Five policemen are killed when Islamic militants booby-trap the body of another murdered policeman.",
         "geo": {
-            "lat": 36.781268,
-            "lng": 45.7346624
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -25666,8 +25975,8 @@
         "injured": "3",
         "description": "One person is killed when Islamists set off a bomb near a school.",
         "geo": {
-            "lat": 42.8222753,
-            "lng": 47.1165961
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -25702,8 +26011,8 @@
         "injured": "0",
         "description": "A man beheads his wife over 'moral crime'.",
         "geo": {
-            "lat": 36.6817149,
-            "lng": 65.7490624
+            "lat": 36.8969692,
+            "lng": 65.6658568
         }
     },
     {
@@ -26157,7 +26466,10 @@
         "killed": "14",
         "injured": "5",
         "description": "Muslim radicals shoot, hack and slit the throats of fourteen Christians.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-04-07",
@@ -26407,8 +26719,8 @@
         "injured": "3",
         "description": "Two Christians are murdered by Muslim extremists for selling non-halal meat.",
         "geo": {
-            "lat": -9.3095648,
-            "lng": 32.7689479
+            "lat": -9.2886009,
+            "lng": 32.8026545
         }
     },
     {
@@ -26466,7 +26778,10 @@
         "killed": "1",
         "injured": "0",
         "description": "Jihadists kidnap and kill a Christian.",
-        "geo": false
+        "geo": {
+            "lat": 36.7808776,
+            "lng": 38.6188955
+        }
     },
     {
         "date": "2013-04-02",
@@ -26500,8 +26815,8 @@
         "injured": "5",
         "description": "Islamic 'insurgents' set off two bombs that leave one person dead.",
         "geo": {
-            "lat": 43.1370768,
-            "lng": 45.0893011
+            "lat": 43.4051698,
+            "lng": 44.8202999
         }
     },
     {
@@ -26571,7 +26886,10 @@
         "killed": "1",
         "injured": "0",
         "description": "Suspected al-Qaeda gunmen murder a man on his way home.",
-        "geo": false
+        "geo": {
+            "lat": 15.552727,
+            "lng": 48.516388
+        }
     },
     {
         "date": "2013-04-01",
@@ -26592,7 +26910,10 @@
         "killed": "3",
         "injured": "2",
         "description": "al-Qaeda attack an oil field, killing several engineers.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-04-01",
@@ -26781,7 +27102,10 @@
         "killed": "2",
         "injured": "1",
         "description": "An 18-year-old is among two women killed in their home by a mortar fired by an Islamist group.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-03-29",
@@ -26874,7 +27198,10 @@
         "killed": "9",
         "injured": "0",
         "description": "Fulani 'militias' murder nine villagers.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-03-29",
@@ -26907,7 +27234,10 @@
         "killed": "3",
         "injured": "15",
         "description": "Sunni bombers slay three Shiites outside their mosque.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-03-29",
@@ -26916,7 +27246,10 @@
         "killed": "5",
         "injured": "14",
         "description": "Five Shiites are blown to bits by al-Qaeda bombers.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-03-29",
@@ -26937,7 +27270,10 @@
         "killed": "2",
         "injured": "0",
         "description": "Taliban bombers take down two local soldiers on patrol.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-03-28",
@@ -27055,8 +27391,8 @@
         "injured": "0",
         "description": "Religious militants shoot a female teacher to death near a girls' school.",
         "geo": {
-            "lat": 29.5305556,
-            "lng": 64.3091667
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -27246,7 +27582,10 @@
         "killed": "2",
         "injured": "3",
         "description": "Two children are killed when a bomb is brought into a Quran school.",
-        "geo": false
+        "geo": {
+            "lat": 5.152149,
+            "lng": 46.199616
+        }
     },
     {
         "date": "2013-03-23",
@@ -27315,7 +27654,10 @@
         "killed": "4",
         "injured": "0",
         "description": "al-Qaeda militants shoot a man and his two sons to death in front of their wife, then kill the woman.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-03-22",
@@ -27325,8 +27667,8 @@
         "injured": "2",
         "description": "Muslim radicals fire on a truck, killing the driver.",
         "geo": {
-            "lat": 28.2065797,
-            "lng": 68.729843
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -27733,8 +28075,8 @@
         "injured": "12",
         "description": "Two people are killed when al-Qaeda set off a car bomb at a market.",
         "geo": {
-            "lat": 32.7648763,
-            "lng": 44.2810588
+            "lat": 32.6946798,
+            "lng": 44.2857937
         }
     },
     {
@@ -27960,7 +28302,10 @@
         "killed": "2",
         "injured": "3",
         "description": "A Muslim fires on a Christian family, killing a baby and a 5-year-old and injuring three women.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-03-16",
@@ -28185,7 +28530,10 @@
         "killed": "1",
         "injured": "1",
         "description": "At least one cop is killed during a Taliban assault on a checkpoint.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-03-13",
@@ -28338,7 +28686,10 @@
         "killed": "3",
         "injured": "2",
         "description": "Islamists take down three local soldiers on patrol with an IED.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-03-11",
@@ -28384,8 +28735,8 @@
         "injured": "0",
         "description": "A healer is shot several times in his own home by militant Islamists.",
         "geo": {
-            "lat": 42.8222753,
-            "lng": 47.1165961
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -28552,8 +28903,8 @@
         "injured": "0",
         "description": "Islamic separatists shoot a Russian judge to death.",
         "geo": {
-            "lat": 42.5684986,
-            "lng": 47.875381
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -28804,8 +29155,8 @@
         "injured": "0",
         "description": "A man is kidnapped and executed by Shaheen Bhittani.",
         "geo": {
-            "lat": 26.6369444,
-            "lng": 62.9311111
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -28839,7 +29190,10 @@
         "killed": "57",
         "injured": "0",
         "description": "al-Nusra terrorists from Syria shoot fifty-seven surrendered soldiers and Iraqi guards in cold blood.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-03-04",
@@ -28921,8 +29275,8 @@
         "injured": "0",
         "description": "A moderate cleric is murdered in his home by Islamic extremists.",
         "geo": {
-            "lat": 42.5687385,
-            "lng": 47.5670154
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -28968,7 +29322,10 @@
         "killed": "3",
         "injured": "3",
         "description": "Sunni fundamentalists ambush and kill three Afghans.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-03-02",
@@ -29433,7 +29790,10 @@
         "killed": "4",
         "injured": "4",
         "description": "Children are among the casualties of an Islamic landmine attack.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-02-24",
@@ -29622,7 +29982,10 @@
         "killed": "5",
         "injured": "11",
         "description": "A baby and a 13-year-old are among five innocents slain when Muslim extremists rake churches with machine-gun fire.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-02-22",
@@ -29667,7 +30030,10 @@
         "killed": "10",
         "injured": "2",
         "description": "Fulani Muslims hack ten Christian family members to death including five small children.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-02-21",
@@ -29701,8 +30067,8 @@
         "injured": "2",
         "description": "Fundamentalists kill one local with a grenade.",
         "geo": {
-            "lat": 31.628871,
-            "lng": 65.7371749
+            "lat": 30.9960679,
+            "lng": 65.475736
         }
     },
     {
@@ -29796,7 +30162,10 @@
         "killed": "9",
         "injured": "27",
         "description": "Nine Iraqis are blown to bits by al-Qaeda bombers.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-02-20",
@@ -29830,8 +30199,8 @@
         "injured": "0",
         "description": "A boy is among three people shot to death in their home by al-Qaeda.",
         "geo": {
-            "lat": 35.743944,
-            "lng": 51.4603415
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -29937,7 +30306,10 @@
         "killed": "1",
         "injured": "1",
         "description": "A civilian is killed during a Taliban attack.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-02-18",
@@ -29971,8 +30343,8 @@
         "injured": "0",
         "description": "A 42-year-old Christian teacher and father of four is brutally executed by al-Shabaab outside his home.",
         "geo": {
-            "lat": 11.1166667,
-            "lng": 42.7833333
+            "lat": 5.152149,
+            "lng": 46.199616
         }
     },
     {
@@ -30211,8 +30583,8 @@
         "injured": "3",
         "description": "An innocent person is machine-gunned by al-Qaeda.",
         "geo": {
-            "lat": 33.0549769,
-            "lng": 44.3520324
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -30223,8 +30595,8 @@
         "injured": "0",
         "description": "A captured Kenyan soldier is executed by al-Shabaab.",
         "geo": {
-            "lat": 1.8076962,
-            "lng": 44.6935736
+            "lat": 5.152149,
+            "lng": 46.199616
         }
     },
     {
@@ -30294,7 +30666,10 @@
         "killed": "4",
         "injured": "0",
         "description": "Militants kill four locals with a roadside bomb.",
-        "geo": false
+        "geo": {
+            "lat": 27.3385115,
+            "lng": 68.0395534
+        }
     },
     {
         "date": "2013-02-14",
@@ -30316,8 +30691,8 @@
         "injured": "6",
         "description": "Four local cops are blown to bits by a Shahid suicide bomber.",
         "geo": {
-            "lat": 43.2562013,
-            "lng": 46.5893353
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -30351,7 +30726,10 @@
         "killed": "9",
         "injured": "23",
         "description": "Two roadside bombings leave nine people dead.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-02-13",
@@ -30361,8 +30739,8 @@
         "injured": "0",
         "description": "A young woman is honor killed by her family and dumped near a mosque.",
         "geo": {
-            "lat": 34.8294298,
-            "lng": 72.9873924
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -30504,7 +30882,10 @@
         "killed": "14",
         "injured": "12",
         "description": "Two al-Nusra suicide bombings reduce fourteen people to body parts.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-02-11",
@@ -30790,8 +31171,8 @@
         "injured": "0",
         "description": "A teenager seven months pregnant is stabbed to death by her brother in a Muslim honor killing.  (The girl was reportedly impregnated by her killer).",
         "geo": {
-            "lat": 33.3963889,
-            "lng": 35.3447222
+            "lat": 33.854721,
+            "lng": 35.862285
         }
     },
     {
@@ -31078,8 +31459,8 @@
         "injured": "7",
         "description": "Six people are killed during an armed clash between Sunnis and Shias.",
         "geo": {
-            "lat": 17.037629,
-            "lng": 44.1221682
+            "lat": 15.552727,
+            "lng": 48.516388
         }
     },
     {
@@ -31161,7 +31542,10 @@
         "killed": "5",
         "injured": "0",
         "description": "Two young children are among a family of five exterminated by a roadside bomb.",
-        "geo": false
+        "geo": {
+            "lat": 33.93911,
+            "lng": 67.709953
+        }
     },
     {
         "date": "2013-02-02",
@@ -31194,7 +31578,10 @@
         "killed": "2",
         "injured": "3",
         "description": "Taliban militants murder two local soldiers.",
-        "geo": false
+        "geo": {
+            "lat": 32.1707805,
+            "lng": 73.1415989
+        }
     },
     {
         "date": "2013-02-02",
@@ -31323,7 +31710,10 @@
         "killed": "15",
         "injured": "1",
         "description": "Islamists attack and burn three churches, killing at least fifteen innocents, including two children.",
-        "geo": false
+        "geo": {
+            "lat": 9.081999,
+            "lng": 8.675277
+        }
     },
     {
         "date": "2013-01-31",
@@ -31369,8 +31759,8 @@
         "injured": "0",
         "description": "Religion of Peace bombers murder two polio workers who were on their way to vaccinate children.",
         "geo": {
-            "lat": 33.7981518,
-            "lng": 70.1351615
+            "lat": 33.801146,
+            "lng": 70.141273
         }
     },
     {
@@ -32005,8 +32395,8 @@
         "injured": "0",
         "description": "Four rival Islamists are murdered by Lashkar e-Islam.",
         "geo": {
-            "lat": 34.1533333,
-            "lng": 74.8057486
+            "lat": 30.375321,
+            "lng": 69.345116
         }
     },
     {
@@ -32064,7 +32454,10 @@
         "killed": "5",
         "injured": "15",
         "description": "Sunni car bombers slaughter five Shiites in their own neighborhood.",
-        "geo": false
+        "geo": {
+            "lat": 33.223191,
+            "lng": 43.679291
+        }
     },
     {
         "date": "2013-01-22",
@@ -32086,8 +32479,8 @@
         "injured": "0",
         "description": "Four young children ages 6 to 12 are disassembled by a Mujahideen bomb outside their home.",
         "geo": {
-            "lat": 33.0549769,
-            "lng": 44.3520324
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -32109,7 +32502,10 @@
         "killed": "2",
         "injured": "0",
         "description": "Two tribesmen are taken out by a Tehreek-e-Taliban drive-by.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-01-21",
@@ -32130,7 +32526,10 @@
         "killed": "30",
         "injured": "50",
         "description": "Shahid suicide car bombers destroy thirty lives in a commercial district.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-01-21",
@@ -32140,8 +32539,8 @@
         "injured": "0",
         "description": "The throat of a 45-year-old woman is cut by her conservative brother after she elopes by choice.",
         "geo": {
-            "lat": 32.3018128,
-            "lng": 74.1462489
+            "lat": 33.6331626,
+            "lng": 73.0816313
         }
     },
     {
@@ -32151,7 +32550,10 @@
         "killed": "2",
         "injured": "9",
         "description": "A Taliban bomb leaves two dead.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-01-21",
@@ -32244,7 +32646,10 @@
         "killed": "48",
         "injured": "0",
         "description": "Twenty three hostages are killed by their Islamic captors during a rescue attempt.  Twenty-five more are found summarily executed",
-        "geo": false
+        "geo": {
+            "lat": 28.033886,
+            "lng": 1.659626
+        }
     },
     {
         "date": "2013-01-18",
@@ -32290,8 +32695,8 @@
         "injured": "1",
         "description": "Laskhar-e-Islam mortar a family home, killing the mother and father and severely injuring their girl.",
         "geo": {
-            "lat": 24.3457734,
-            "lng": 68.0274434
+            "lat": 33.9663006,
+            "lng": 70.0518027
         }
     },
     {
@@ -32518,8 +32923,8 @@
         "injured": "0",
         "description": "Seven Iraqis are killed in a handful of Mujahideen attacks.",
         "geo": {
-            "lat": 35.0180032,
-            "lng": 43.4452148
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     },
     {
@@ -32529,7 +32934,10 @@
         "killed": "2",
         "injured": "6",
         "description": "Armed Islamists attack an oil field, killing two people they identified as Christians and kidnapping over a hundred workers.",
-        "geo": false
+        "geo": {
+            "lat": 28.033886,
+            "lng": 1.659626
+        }
     },
     {
         "date": "2013-01-16",
@@ -32551,8 +32959,8 @@
         "injured": "0",
         "description": "A security official is assassinated by al-Qaeda.",
         "geo": {
-            "lat": 14.7195344,
-            "lng": 44.2479015
+            "lat": 14.5455447,
+            "lng": 44.4087348
         }
     },
     {
@@ -32659,8 +33067,8 @@
         "injured": "0",
         "description": "Suspected Islamists assassinate a judge.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -32695,8 +33103,8 @@
         "injured": "0",
         "description": "Suspected Islamic 'separatists' assassinate a prominent judge.",
         "geo": {
-            "lat": 42.9666308,
-            "lng": 47.5126285
+            "lat": 42.1431886,
+            "lng": 47.0949799
         }
     },
     {
@@ -32718,7 +33126,10 @@
         "killed": "106",
         "injured": "0",
         "description": "Shiite militia and Sunni Islamists are blamed by the other for the massacre of over one hundred civilians, mostly family members.",
-        "geo": false
+        "geo": {
+            "lat": 34.802075,
+            "lng": 38.996815
+        }
     },
     {
         "date": "2013-01-14",
@@ -32739,7 +33150,10 @@
         "killed": "1",
         "injured": "8",
         "description": "A bombing attack on a van full of Shia leaves one dead.",
-        "geo": false
+        "geo": {
+            "lat": 30.375321,
+            "lng": 69.345116
+        }
     },
     {
         "date": "2013-01-13",
@@ -33529,8 +33943,8 @@
         "injured": "0",
         "description": "Four people are burned to death by Religion of Peace radicals, including a child.",
         "geo": {
-            "lat": 9.8257523,
-            "lng": 12.6158803
+            "lat": 4.8580767,
+            "lng": 6.9209135
         }
     },
     {
@@ -33600,7 +34014,10 @@
         "killed": "1",
         "injured": "3",
         "description": "al-Shabaab gunmen open fire on women at a wedding party, killing at least one.",
-        "geo": false
+        "geo": {
+            "lat": 5.152149,
+            "lng": 46.199616
+        }
     },
     {
         "date": "2013-01-02",
@@ -33718,8 +34135,8 @@
         "injured": "5",
         "description": "Two girls are killed when suspected Taliban shell their school.",
         "geo": {
-            "lat": 33.9860859,
-            "lng": 71.994303
+            "lat": 33.8068519,
+            "lng": 70.1503008
         }
     },
     {
@@ -33730,8 +34147,8 @@
         "injured": "0",
         "description": "A 23-year-old mother of two is murdered by her family for unIslamic behavior.",
         "geo": {
-            "lat": 30.0361477,
-            "lng": 31.2397074
+            "lat": 33.223191,
+            "lng": 43.679291
         }
     }
 ]
