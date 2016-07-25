@@ -94,7 +94,6 @@ function get_geo($object) {
         return $geo_cache[$object['country']][$object['city']];
     }
 
-
     if (isset($geo_cache[$object['country']]['COUNTRY'])) {
         return $geo_cache[$object['country']]['COUNTRY'];
     }

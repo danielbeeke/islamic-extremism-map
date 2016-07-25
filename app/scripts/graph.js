@@ -52,7 +52,17 @@ octopus.graph = {
                 align: 'right',
                 layout: 'horizontal',
                 verticalAlign: 'bottom',
-                y: 0
+                y: 0,
+
+                itemStyle: {
+                    color: '#E0E0E3'
+                },
+                itemHoverStyle: {
+                    color: '#FFF'
+                },
+                itemHiddenStyle: {
+                    color: '#444444'
+                }
             },
             xAxis: {
                 type: 'datetime',
