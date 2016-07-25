@@ -67,7 +67,9 @@ foreach ($years as $year) {
 
 foreach ($years as $year) {
     if (file_exists('app/json/' . $year . '.json')) {
-        $objects = json_decode(file_get_contents('app/json/' . $year . '.json'), TRUE);
+        $html_data = file_get_contents('app/json/' . $year . '.json');
+        $html_data = str_replace("\r\n                  ", '', $html_data);
+        $objects = json_decode($html_data, TRUE);
 
         foreach ($objects as &$object) {
             if (!isset($object['geo'])) {
