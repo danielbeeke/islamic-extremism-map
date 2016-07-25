@@ -1,14 +1,20 @@
 .chart {
   position: absolute;
-  bottom: 0;
-  height: 300px;
+  bottom: -82px;
+  height: 363px;
   width: 100%;
-  overflow: hidden;
-  background: linear-gradient(to top, black 75%, rgba(black, 0) 100%);
 
-  .highcharts-container {
-    position: relative;
-    top: 63px !important;
+  &:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(to top, black 0%, rgba(black, .5) 40%, rgba(black, 0) 100%);
   }
 
   .highcharts-axis,
@@ -22,6 +28,32 @@
   }
 
   .highcharts-legend {
-    top: 120px !important;
+    top: 50px !important;
+
+    .highcharts-legend-item {
+      span {
+        background-color: black;
+        border-radius: 3px;
+        padding: 10px;
+        position: relative !important;
+      }
+
+      span:before {
+        vertical-align: middle;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        content: '';
+        margin-right: 10px;
+      }
+
+      &:nth-child(1) span:before {
+        background-color: $red-dark;
+      }
+
+      &:nth-child(2) span:before {
+        background-color: $red-light;
+      }
+    }
   }
 }

@@ -88,21 +88,34 @@ function get_geo($object) {
     }
 
     if (!isset($geo_cache[$object['country']][$object['city']])) {
-        $location = $object['city'] . ',' . $object['country'];
+        $city = urlencode(cleanString($object['city']));
+        $country = urlencode(cleanString($object['country']));
 
-        $location = urlencode(cleanString($location));
+        $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyCVO_TF5jPc6xtt8wjMT5UBAe3RYvdUilI&address=' . $city . '&components=country:' . $country), TRUE);
 
-        $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyBbvfdgUmI8t8289qFA-_o5yw4har1F0g8&address=' . $location), TRUE);
         if (isset($geo_result['results'][0]['geometry']['location'])) {
             $geo_cache[$object['country']][$object['city']] = $geo_result['results'][0]['geometry']['location'];
-            file_put_contents('data_cache/geo.cache', json_encode($geo_cache));
         }
         elseif (isset($geo_result['status']) && $geo_result['status'] == 'ZERO_RESULTS') {
-            $geo_cache[$object['country']][$object['city']] = FALSE;
+            if (isset($geo_cache[$object['country']]['COUNTRY'])) {
+                return $geo_cache[$object['country']]['COUNTRY'];
+            }
+            else {
+                $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyCVO_TF5jPc6xtt8wjMT5UBAe3RYvdUilI&address=' . $country), TRUE);
+
+                if (isset($geo_result['results'][0]['geometry']['location'])) {
+                    $geo_cache[$object['country']]['COUNTRY'] = $geo_result['results'][0]['geometry']['location'];
+                }
+                else {
+                    $geo_cache[$object['country']][$object['city']] = FALSE;
+                }
+            }
         }
         else {
             print_r($geo_result);
         }
+
+        file_put_contents('data_cache/geo.cache', json_encode($geo_cache));
     }
 
     if (isset($geo_cache[$object['country']][$object['city']])) {
