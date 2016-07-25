@@ -91,7 +91,7 @@ function get_geo($object) {
         $city = urlencode(cleanString($object['city']));
         $country = urlencode(cleanString($object['country']));
 
-        $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyCVO_TF5jPc6xtt8wjMT5UBAe3RYvdUilI&address=' . $city . '&components=country:' . $country), TRUE);
+        $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyDk6AlUJ6slzXd1hVlG92y5-H0VVe579gE&address=' . $city . '&components=country:' . $country), TRUE);
 
         if (isset($geo_result['results'][0]['geometry']['location'])) {
             $geo_cache[$object['country']][$object['city']] = $geo_result['results'][0]['geometry']['location'];
@@ -101,7 +101,7 @@ function get_geo($object) {
                 return $geo_cache[$object['country']]['COUNTRY'];
             }
             else {
-                $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyCVO_TF5jPc6xtt8wjMT5UBAe3RYvdUilI&address=' . $country), TRUE);
+                $geo_result = json_decode(file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyDk6AlUJ6slzXd1hVlG92y5-H0VVe579gE&address=' . $country), TRUE);
 
                 if (isset($geo_result['results'][0]['geometry']['location'])) {
                     $geo_cache[$object['country']]['COUNTRY'] = $geo_result['results'][0]['geometry']['location'];
