@@ -9,7 +9,7 @@ define('CARTO_APIKEY', '7a21536f8d4e92fae1a647e6bf47355b95d49df3');
 define('CARTO_URL', 'http://danielbeeke.carto.com/api/v2/sql?q=');
 
 function downloadCurrentYearHtml() {
-    $year = 2012;
+    $year = 2016;
 
     $year_data = file_get_contents('http://www.thereligionofpeace.com/attacks/attacks.aspx?Yr=' . $year);
 
