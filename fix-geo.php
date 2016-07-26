@@ -10,5 +10,16 @@ define('CARTO_URL', 'http://danielbeeke.carto.com/api/v2/sql?q=');
 
 $items_to_geocode_query = 'SELECT * FROM islamic_extremism WHERE cartodb_georef_status = false ORDER BY cartodb_id ASC LIMIT 100';
 $items_to_geocode = json_decode(file_get_contents(CARTO_URL . urlencode($items_to_geocode_query)), TRUE);
+$geo_cache = json_decode(file_get_contents('data_cache/geo.cache'), TRUE);
 
-print_r($items_to_geocode['rows']);
+foreach ($items_to_geocode['rows'] as $object) {
+    if (isset($geo_cache[$object['country']][$object['city']])) {
+        $object['geo'] = $geo_cache[$object['country']][$object['city']];
+    }
+    elseif (isset($geo_cache[$object['country']]['COUNTRY'])) {
+        $object['geo'] = $geo_cache[$object['country']]['COUNTRY'];
+    }
+    else {
+        print 'Could not find: ' . $object['city'] . ' in ' . $object['country'];
+    }
+}
