@@ -73,7 +73,12 @@ foreach ($years as $year) {
 
         foreach ($objects as &$object) {
             if (!isset($object['geo'])) {
-                $object['geo'] = get_geo($object);
+                $geo = get_geo($object);
+
+                if (isset($geo['lat'])) {
+                    $object['lat'] = $geo['lat'];
+                    $object['lng'] = $geo['lng'];
+                }
             }
         }
 

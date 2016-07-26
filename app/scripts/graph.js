@@ -3,7 +3,7 @@ window.octopus = window.octopus ? window.octopus : {};
 // TODO fix the labels in the popup to include date till date.
 
 octopus.graph = {
-    render: function (data, callback, orginalFilters) {
+    render: function (data, callback, originalFilters) {
         var seriesObject = octopus.graph._prepare(data);
 
         octopus.graph._graph = new Highcharts.StockChart({
@@ -118,9 +118,9 @@ octopus.graph = {
             }]
         });
 
-        if (orginalFilters.minDate && orginalFilters.maxDate) {
-            var startDate = new Date(orginalFilters.minDate);
-            var endDate = new Date(orginalFilters.maxDate);
+        if (originalFilters.minDate && originalFilters.maxDate) {
+            var startDate = new Date(originalFilters.minDate);
+            var endDate = new Date(originalFilters.maxDate);
 
             octopus.graph._graph.xAxis[0].setExtremes(
                 Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate()),

@@ -57,3 +57,44 @@ function extend(from, to) {
 
     return to;
 }
+
+Highcharts.setOptions({
+    plotOptions: {
+        area: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        arearange: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        areaspline: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        areasplinerange: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        bar: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        boxplot: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        bubble: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        column: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        columnrange: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        errorbar: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        funnel: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        gauge: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        heatmap: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        line: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        pie: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        polygon: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        pyramid: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        scatter: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        series: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        solidgauge: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        spline: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        treemap: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+        waterfall: { animation: false, stickyTracking: true, shadow: false, dataLabels: { style: { textShadow: false } } },
+    },
+    chart: {
+        reflow: false,
+        animation: false
+    },
+    tooltip: {
+        animation: false
+    },
+    exporting: {
+        enabled:false
+    },
+    credits: {
+        enabled: false
+    }
+});

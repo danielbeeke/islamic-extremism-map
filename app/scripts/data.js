@@ -79,8 +79,8 @@ octopus.data = {
     },
 
     _survivedFilterByBounds: function (item, bounds) {
-        if (item.geo.lat && item.geo.lng && typeof bounds.isValid == 'function' && bounds.isValid()) {
-            return bounds.contains(L.latLng(item.geo.lat, item.geo.lng));
+        if (item.lat && item.lng && typeof bounds.isValid == 'function' && bounds.isValid()) {
+            return bounds.contains(L.latLng(item.lat, item.lng));
         }
     },
 

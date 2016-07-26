@@ -125,8 +125,8 @@ octopus.map = {
             var markers = [];
 
             data.forEach(function (item) {
-                if (item.geo && item.geo.lat) {
-                    item._marker = L.marker([item.geo.lat, item.geo.lng])
+                if (item.lat) {
+                    item._marker = L.marker([item.lat, item.lng])
                         .bindPopup(octopus.map._getItemMarkup(item));
                     item._marker._data = item;
                     markers.push(item._marker);
