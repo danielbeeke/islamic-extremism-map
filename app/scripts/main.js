@@ -53,6 +53,25 @@ octopus.init = function () {
         }
     ], function () {
         octopus.router.init();
+
+        var zoom = filters.zoom ? filters.zoom : 6;
+
+        var query = 'SELECT count(cartodb_id), ' +
+            'SUM(killed) as killed, ' +
+            'SUM(injured) as injured, ' +
+            'ST_X(st_centroid(ST_GeomFromGeoHash(substr(ST_GeoHash(the_geom), 0, ' + zoom + ')))) as lon, ' +
+            'ST_Y(st_centroid(ST_GeomFromGeoHash(substr(ST_GeoHash(the_geom), 0, ' + zoom + ')))) as lat ' +
+            'FROM islamic_extremism ' +
+            'GROUP BY substr(ST_GeoHash(the_geom), 0, ' + zoom + ') ';
+
+        if (filters.bounds) {
+            var viewport = filters.bounds.toBBoxString();
+            query += 'WHERE ST_Contains(ST_MakeEnvelope(' + viewport + ', 4326), the_geom)';
+        }
+
+        var url = 'http://danielbeeke.carto.com/api/v2/sql?q=' + query;
+
+        console.log(url)
     });
 };
 

@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "75c5da56b6aed29dd63fb913add7af35",
+    "content-hash": "f0c941749f2bd0475ee30d3bc7df015e",
+    "packages": [
+        {
+            "name": "geohash/geohash",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Eleme/geohash.git",
+                "reference": "1b7a1622799a82a29f24aed31920a844af61242d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Eleme/geohash/zipball/1b7a1622799a82a29f24aed31920a844af61242d",
+                "reference": "1b7a1622799a82a29f24aed31920a844af61242d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Geohash\\": "src",
+                    "Geohash\\Tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jefferson Lyu",
+                    "email": "jefferson.lyu@gmail.com",
+                    "homepage": "https://github.com/jlyu"
+                },
+                {
+                    "name": "Hongbo Tang",
+                    "email": "thbourlove@gmail.com"
+                }
+            ],
+            "description": "geohash package",
+            "homepage": "http://github.com/Eleme/geohash",
+            "keywords": [
+                "geohash"
+            ],
+            "time": "2014-03-18 11:06:23"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

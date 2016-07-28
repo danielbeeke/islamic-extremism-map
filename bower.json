@@ -7,7 +7,8 @@
     "Leaflet.FeatureGroup.SubGroup": "ghybs/Leaflet.FeatureGroup.SubGroup#^1.0.0",
     "async": "^2.0.0",
     "highcharts": "^4.2.5",
-    "leaflet-hash": "mlevans/leaflet-hash"
+    "leaflet-hash": "mlevans/leaflet-hash",
+    "latlon-geohash": "chrisveness/latlon-geohash#^1.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
