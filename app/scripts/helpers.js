@@ -32,7 +32,7 @@ function debounce(callback, time) {
         clearTimeout(timeout);
         timeout = setTimeout(callback, time);
     };
-};
+}
 
 function formatDate (date) {
     var year = date.getFullYear();
@@ -98,3 +98,15 @@ Highcharts.setOptions({
         enabled: false
     }
 });
+
+function ajax (url, callback) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var json = JSON.parse(xhttp.responseText);
+            callback(json);
+        }
+    };
+    xhttp.open('GET', url, true);
+    xhttp.send();
+}

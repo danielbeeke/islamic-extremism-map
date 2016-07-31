@@ -1,11 +1,12 @@
 window.octopus = window.octopus ? window.octopus : {};
 
 octopus.map = {
+    _oldZoom: 0,
     _tiles: 'http://tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/terror-map.tm2&iqp86m8u',
     _mapSettings: {
         attributionControl: false,
-        minZoom: 2,
-        maxZoom: 8,
+        minZoom: 3,
+        maxZoom: 16,
         zoomControl: false,
         worldCopyJump: true
     },
@@ -14,6 +15,7 @@ octopus.map = {
         singleMarkerMode: true,
         spiderfyDistanceMultiplier: 2,
         maxClusterRadius: 95,
+        animate: false,
         iconCreateFunction: function (cluster) {
             return octopus.map._markerIconCallback(cluster);
         }
@@ -101,53 +103,51 @@ octopus.map = {
     },
 
     init: function (callback) {
-        var zoom = octopus.filters && octopus.filters.zoom ? octopus.filters.zoom : 2;
-        var center = octopus.filters && octopus.filters.center ? octopus.filters.center : [51.505, -0.09];
-
-        octopus.map._map = L.map('map', octopus.map._mapSettings);
+        octopus.map._map = L.map('map', octopus.map._mapSettings).setView([51.505, -0.09], 13);
+        octopus.map._hash = new L.Hash(octopus.map._map);
         L.tileLayer(octopus.map._tiles).addTo(octopus.map._map);
-        octopus.map._map.setView(center, zoom, { animate: false });
+
         octopus.map._cluster = L.markerClusterGroup(octopus.map._clusterSettings);
         octopus.map._cluster.addTo(octopus.map._map);
 
-        octopus.map._map.on('viewreset, moveend', debounce(function () {
-            var filters = octopus.getFilters();
-            octopus.renderGraph(filters);
+        octopus.map._map.on('moveend', debounce(function () {
+            octopus.map._getId++;
+            L.DomUtil.addClass(document.body, 'has-ajaxing-data');
+
+            var filters = octopus.data.filters();
+            octopus.data.get(filters, function (data) {
+                octopus.map.render(data, false, octopus.map._getId);
+            });
         }, 100));
 
-        if (typeof callback == 'function') {
-            callback();
-        }
+        octopus.map._map.on('loaded', function () {
+            if (typeof callback == 'function') {
+                callback();
+            }
+        });
     },
 
-    render: function (data, callback) {
-        var continueRender = function () {
-            var markers = [];
+    _getId: 1,
+    render: function (data, callback, getId) {
+        var markers = [];
 
-            data.forEach(function (item) {
-                if (item.lat) {
-                    item._marker = L.marker([item.lat, item.lng])
-                        .bindPopup(octopus.map._getItemMarkup(item));
-                    item._marker._data = item;
-                    markers.push(item._marker);
-                }
-            });
+        data.rows.forEach(function (item) {
+            if (item.lat) {
+                item._marker = L.marker([item.lat, item.lng])
+                    .bindPopup(octopus.map._getItemMarkup(item));
+                item._marker._data = item;
+                markers.push(item._marker);
+            }
+        });
 
+        if (getId == octopus.map._getId) {
+            octopus.map._cluster.clearLayers();
             octopus.map._cluster.addLayers(markers);
+            L.DomUtil.removeClass(document.body, 'has-ajaxing-data');
 
             if (typeof callback == 'function') {
                 callback();
             }
-        };
-
-        if (!octopus.map._map) {
-            octopus.map.init(function () {
-                continueRender();
-            });
-        }
-        else {
-            octopus.map._cluster.clearLayers();
-            continueRender();
         }
     },
 

@@ -1,111 +1,51 @@
 window.octopus = window.octopus ? window.octopus : {};
 
 octopus.data = {
-    _data: [],
-    download: function (callback) {
-        var functions = [];
+    get: function (filters, callback) {
+        var query;
 
-        octopus.years.forEach(function (year) {
-            functions.push(function (callback) {
-                var url = '../json/' + year + '.json';
-                var worker = new Worker('scripts/worker.data.get.js');
-
-                worker.postMessage(url);
-                worker.onmessage = function(event) {
-                    worker.terminate();
-                    octopus.data._data = octopus.data._data.concat(event.data);
-                    callback(null);
-                };
-            })
-        });
-
-        async.parallel(functions,
-        function(err, results) {
-            if (!err && typeof callback == 'function') {
-                callback();
-            }
-
-            if (err) {
-                console.error('Something happened while downloading the data.');
-            }
-        });
-    },
-
-    get: function (callback) {
-        if (!octopus.data._data.length) {
-            octopus.data.download(function () {
-                if (typeof callback == 'function') {
-                    callback(octopus.data._data);
-                }
-            });
+        if (filters.zoom > 10) {
+            query = 'SELECT *, ' +
+                'ST_X(the_geom) as lng, ' +
+                'ST_Y(the_geom) as lat ' +
+                'FROM islamic_extremism ';
         }
-        else if (typeof callback == 'function') {
-            callback(octopus.data._data);
+        else {
+            query = 'SELECT count(cartodb_id), ' +
+                'SUM(killed) as killed, ' +
+                'SUM(injured) as injured, ' +
+                'ST_X(st_centroid(ST_GeomFromGeoHash(substr(ST_GeoHash(the_geom), 0, ' + filters.zoom + ')))) as lng, ' +
+                'ST_Y(st_centroid(ST_GeomFromGeoHash(substr(ST_GeoHash(the_geom), 0, ' + filters.zoom + ')))) as lat ' +
+                'FROM islamic_extremism ';
         }
-    },
 
-    getFiltered: function (callback, filters) {
-        var minDate = filters.minDate ? filters.minDate : false;
-        var maxDate = filters.maxDate ? filters.maxDate : false;
-        var types = filters.types ? filters.types : [];
-        var bounds = filters.bounds ? filters.bounds : null;
+        if (filters.bounds) {
+            var viewport = filters.bounds.toBBoxString();
+            query += 'WHERE ST_Contains(ST_MakeEnvelope(' + viewport + ', 4326), the_geom)';
+        }
 
-        var filteredData = [];
 
-        octopus.data.get(function (data) {
-            data.forEach(function (item) {
-                var itemShouldBeIncluded = true;
-                if ((minDate || maxDate) && !octopus.data._survivedFilterByDates(item, minDate, maxDate)) {
-                    itemShouldBeIncluded = false;
-                }
+        if (filters.zoom > 10) {
 
-                if (types && types.constructor === Array && types.length && !octopus.data._survivedFilterByTypes(item, types)) {
-                    itemShouldBeIncluded = false;
-                }
+        }
+        else {
+            query += 'GROUP BY substr(ST_GeoHash(the_geom), 0, ' + filters.zoom + ') ';
+        }
 
-                if (bounds && !octopus.data._survivedFilterByBounds(item, bounds)) {
-                    itemShouldBeIncluded = false;
-                }
+        var url = 'http://danielbeeke.carto.com/api/v2/sql?q=' + query;
 
-                if (itemShouldBeIncluded) {
-                    filteredData.push(item);
-                }
-            });
-
+        ajax(url, function (data) {
             if (typeof callback == 'function') {
-                callback(filteredData);
+                callback(data);
             }
-        });
+        })
     },
 
-    _survivedFilterByBounds: function (item, bounds) {
-        if (item.lat && item.lng && typeof bounds.isValid == 'function' && bounds.isValid()) {
-            return bounds.contains(L.latLng(item.lat, item.lng));
+    filters: function () {
+        return {
+            zoom: octopus.map._map.getZoom(),
+            bounds: octopus.map._map.getBounds()
         }
-    },
-
-    _survivedFilterByTypes: function (item, types) {
-        var hasOneOfTheTypes = false;
-        types.forEach(function (type) {
-            if (item[type]) {
-                hasOneOfTheTypes = true;
-            }
-        });
-
-        return hasOneOfTheTypes;
-    },
-
-    _survivedFilterByDates: function (item, minDate, maxDate) {
-        var isValid = true;
-
-        if (minDate > Date.parse(item.date)) {
-            isValid = false;
-        }
-
-        if (maxDate < Date.parse(item.date)) {
-            isValid = false;
-        }
-
-        return isValid;
     }
+
 };

@@ -8,3 +8,16 @@
 #tempmap {
   z-index: -1;
 }
+
+.leaflet-marker-pane {
+  opacity: 1;
+  transition: opacity $speed $easing;
+}
+
+.has-ajaxing-data {
+  .leaflet-container {
+    .leaflet-marker-pane {
+      opacity: 0;
+    }
+  }
+}
