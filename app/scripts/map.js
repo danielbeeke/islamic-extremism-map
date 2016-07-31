@@ -112,7 +112,6 @@ octopus.map = {
 
         octopus.map._map.on('moveend', debounce(function () {
             octopus.map._getId++;
-            L.DomUtil.addClass(document.body, 'has-ajaxing-data');
 
             var filters = octopus.data.filters();
             octopus.data.get(filters, function (data) {
@@ -143,13 +142,11 @@ octopus.map = {
         if (getId == octopus.map._getId) {
             octopus.map._cluster.clearLayers();
             octopus.map._cluster.addLayers(markers);
-            L.DomUtil.removeClass(document.body, 'has-ajaxing-data');
 
             if (typeof callback == 'function') {
                 callback();
             }
         }
-    },
-
+    }
 };
 
